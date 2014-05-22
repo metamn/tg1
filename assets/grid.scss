@@ -1,0 +1,58 @@
+// 1. Font family
+//font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: 'Inconsolata', monospace;
+
+// Notes on font family
+// - from Google fonts select only sans-serif & order by Number of styles
+// - a font should have at least bold version, italic would be fine
+// - the requirements however are set by typographic element decorations
+
+// 2. Font size
+$font-size: 100%;
+
+// 3. Line height
+$line-height: 1.25;
+
+// 4. Gutter
+$gutter: 1.25em;
+
+// 5. Characters per row
+$characters-per-row: 55;
+
+// 6. Cell width
+// - Cell refers to text, it's width equals around 40-60 characters
+// - This formula is a guess, it was measured by hand
+$cell-width: $characters-per-row * $gutter/2;
+
+
+// 7. Grid width
+// - Grid refers to other elements like text, it is more granulated than the Cel
+// - The cell is to wide; it must be divided into 2 or 3 columns, according to the nr. of characters per row (40 or 60)
+$grid-width: $cell-width / 4;
+
+// Notes on Responsiveness
+// - with $characters-per-row 40, 60 divided by 2, 3 we got a strange grid on mobiles
+// - making the grid more granular, ie $charachters-per-row 50 divided by 4 we have a two column grid also on mobiles.
+
+// Notes on font family & Responsiveness
+// - changing the font-family breaks the grid
+// - with Helvetica the 50/4 grid was ok, with Inconsolata the 55/4 grid was perfect
+
+
+// 8. Cell height
+// - four lines of text, it has nothing to do with the cell-width
+$cell-height: $gutter*4;
+
+
+// 9. Cell width
+// - The gutters must be added to the old cell-width
+// - This is already has to do with responsiveness
+$cell-width: $cell-width + 3 * $gutter;
+
+
+
+@mixin typographic-grid {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}

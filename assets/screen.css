@@ -1,0 +1,154 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, screen.scss */
+html body {
+  width: 98%;
+  margin: 1% auto;
+  font-family: "Inconsolata", monospace;
+  font-size: 100%;
+  line-height: 1.25;
+}
+/* line 38, typography.scss */
+html body h1 {
+  font-weight: bold;
+  margin-top: 1.25em;
+  margin-top: 2.5em;
+  margin-bottom: calc(1.25em - 1px);
+  border-bottom: 1px solid;
+  border-bottom: 0.625em solid;
+  padding-bottom: 0.625em;
+  margin-bottom: 1.25em;
+  margin-top: 0;
+  border-bottom: none;
+  padding: 0.625em;
+  width: calc(100% - 1.25em);
+  color: #fff;
+  background: #000;
+}
+/* line 42, typography.scss */
+html body h2 {
+  font-weight: bold;
+  margin-top: 1.25em;
+  margin-top: 2.5em;
+  margin-bottom: calc(1.25em - 1px);
+  border-bottom: 1px solid;
+  border-bottom: 0.625em solid;
+  padding-bottom: 0.625em;
+  margin-bottom: 1.25em;
+}
+/* line 46, typography.scss */
+html body h3 {
+  font-weight: bold;
+  margin-top: 1.25em;
+  margin-top: 2.5em;
+  margin-bottom: calc(1.25em - 1px);
+  border-bottom: 1px solid;
+}
+/* line 50, typography.scss */
+html body h4 {
+  font-weight: bold;
+  margin-top: 1.25em;
+}
+/* line 19, screen.scss */
+html body article {
+  width: 38.125em;
+  float: left;
+  margin-right: 1.25em;
+}
+/* line 30, screen.scss */
+html body #grid {
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .1;
+  z-index: -1;
+}
+/* line 39, screen.scss */
+html body #grid .col {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  width: calc(8.59375em + 1.25em - 1px);
+  height: calc(5em + 1.25em - 1px);
+  float: left;
+}
+/* line 47, screen.scss */
+html body #grid .gutter-right {
+  float: right;
+  border-left: 1px solid;
+  width: calc(1.25em - 1px);
+  height: 100%;
+}
+/* line 54, screen.scss */
+html body #grid .gutter-bottom {
+  float: left;
+  border-bottom: 1px solid;
+  height: calc(1.25em - 1px);
+  width: 100%;
+}

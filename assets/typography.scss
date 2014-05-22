@@ -1,0 +1,53 @@
+// We are building from bottom up every style
+
+@mixin h4 {
+  font-weight: bold;
+  margin-top: $gutter;
+}
+
+@mixin h3 {
+  @include h4;
+  
+  margin-top: $gutter*2;
+  margin-bottom: calc(#{$gutter} - 1px);
+  border-bottom: 1px solid;
+}
+
+@mixin h2 {
+  @include h3;
+  
+  border-bottom: $gutter/2 solid;
+  padding-bottom: $gutter/2;
+  margin-bottom: $gutter;
+}
+
+@mixin h1 {
+  @include h2;
+  
+  margin-top: 0;
+  border-bottom: none;
+  padding: $gutter/2;
+  width: calc(100% - #{$gutter});
+  
+  color: #fff;
+  background: #000;
+}
+
+
+@mixin typographic-elements {
+  h1 {
+    @include h1;
+  }
+  
+  h2 {
+    @include h2;
+  }
+  
+  h3 {
+    @include h3;
+  }
+  
+  h4 {
+    @include h4;
+  }
+}
