@@ -1,0 +1,41 @@
+footer {
+  h3 {
+    display: none;
+  }
+  
+  ul {
+    li {
+      display: inline-block;
+      float: left;
+      margin-right: $gutter;
+    }
+  }
+  
+  img {
+    height: $gutter; 
+  }
+}
+
+main {
+  section h3, article figure figcaption, article h1 {
+    display: none;
+  }
+  
+  article {
+    overflow: hidden;
+    
+    figure {
+      border: 1px solid;
+    }
+  }
+}
+
+
+
+
+
+
+@mixin block {
+  width: 100%;
+  float: left;
+}

@@ -98,3 +98,20 @@ $breakpoint-text-double-column: ($text-cell-width + $gutter) * 2;
 }
 
 
+
+
+
+
+@mixin col($nr) {
+  width: $nr * $grid-width + ($nr - 1) * $gutter;
+  margin-right: $gutter;
+  float: left;
+}
+
+@mixin row($nr) {
+  height: $nr * $text-height + ($nr - 1) * $gutter;
+  margin-bottom: $gutter;
+}
+
+
+

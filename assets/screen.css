@@ -67,7 +67,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 12, screen.scss */
+/* line 2, other.scss */
+footer h3 {
+  display: none;
+}
+/* line 7, other.scss */
+footer ul li {
+  display: inline-block;
+  float: left;
+  margin-right: 1.25em;
+}
+/* line 14, other.scss */
+footer img {
+  height: 1.25em;
+}
+
+/* line 20, other.scss */
+main section h3, main article figure figcaption, main article h1 {
+  display: none;
+}
+/* line 24, other.scss */
+main article {
+  overflow: hidden;
+}
+/* line 27, other.scss */
+main article figure {
+  border: 1px solid;
+}
+
+/* line 13, screen.scss */
 html body {
   width: 98%;
   margin: 1% auto;
@@ -116,22 +144,47 @@ html body h4 {
   font-weight: bold;
   margin-top: 1.25em;
 }
-/* line 19, screen.scss */
-html body article {
+/* line 57, typography.scss */
+html body p + p {
+  margin-top: 1.25em;
+}
+/* line 22, screen.scss */
+html body footer {
+  width: 100%;
+  float: left;
   width: 38.125em;
   float: left;
   margin-right: 1.25em;
+  height: 11.25em;
+  margin-bottom: 1.25em;
 }
 @media only screen and (max-width: 78.749em) {
-  /* line 19, screen.scss */
-  html body article {
+  /* line 22, screen.scss */
+  html body footer {
     width: 100%;
     max-width: 38.125em;
     margin-right: 0;
     margin-bottom: 1.25em;
   }
 }
-/* line 28, screen.scss */
+/* line 27, screen.scss */
+html body footer nav {
+  margin-top: 1.25em;
+}
+/* line 32, screen.scss */
+html body main {
+  width: 100%;
+  float: left;
+}
+/* line 37, screen.scss */
+html body main article {
+  width: 28.28125em;
+  margin-right: 1.25em;
+  float: left;
+  height: 11.25em;
+  margin-bottom: 1.25em;
+}
+/* line 50, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -139,7 +192,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 37, screen.scss */
+/* line 59, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -147,14 +200,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 45, screen.scss */
+/* line 67, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 52, screen.scss */
+/* line 74, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;
