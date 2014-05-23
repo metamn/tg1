@@ -17,9 +17,7 @@ html {
     @include typographic-elements;
     
     article {
-      width: $cell-width;
-      float: left;
-      margin-right: $gutter;
+      @include cell-width;
     }
     
     

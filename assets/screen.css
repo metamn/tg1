@@ -122,7 +122,16 @@ html body article {
   float: left;
   margin-right: 1.25em;
 }
-/* line 30, screen.scss */
+@media only screen and (max-width: 78.749em) {
+  /* line 19, screen.scss */
+  html body article {
+    width: 100%;
+    max-width: 38.125em;
+    margin-right: 0;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 28, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -130,7 +139,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 39, screen.scss */
+/* line 37, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -138,14 +147,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 47, screen.scss */
+/* line 45, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 54, screen.scss */
+/* line 52, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

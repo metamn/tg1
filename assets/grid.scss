@@ -56,3 +56,36 @@ $cell-width: $cell-width + 3 * $gutter;
   font-size: $font-size;
   line-height: $line-height;
 }
+
+
+
+
+
+
+// v1
+// Responsiveness
+// ------------------------------------------------------------
+
+
+$double-column: ($cell-width + $gutter) * 2;
+
+@mixin single-column {
+  @media only screen and (max-width: $double-column - 0.001) {
+    @content;
+  }
+}
+
+@mixin cell-width {
+  width: $cell-width;
+  float: left;
+  margin-right: $gutter;
+  
+  @include single-column {
+    width: 100%;
+    max-width: $cell-width;
+    margin-right: 0;
+    margin-bottom: $gutter;
+  }
+}
+
+
