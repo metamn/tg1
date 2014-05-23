@@ -13,41 +13,45 @@ $font-size: 100%;
 // 3. Line height
 $line-height: 1.25;
 
-// 4. Gutter
+// 4. Gutter, ie $font-size combined with $line-height
 $gutter: 1.25em;
 
 // 5. Characters per row
 $characters-per-row: 55;
 
-// 6. Cell width
-// - Cell refers to text, it's width equals around 40-60 characters
+// 6. Text width
+// - For readability concerns it's width equals around 40-60 characters
+// - Based on Text width the Grid with is calculated
 // - This formula is a guess, it was measured by hand
-$cell-width: $characters-per-row * $gutter/2;
+$text-width: $characters-per-row * $gutter/2;
+$text-width: $characters-per-row * $gutter/2;
 
 
 // 7. Grid width
-// - Grid refers to other elements like text, it is more granulated than the Cel
-// - The cell is to wide; it must be divided into 2 or 3 columns, according to the nr. of characters per row (40 or 60)
-$grid-width: $cell-width / 4;
+// - Grid refers to other elements than text, it is more granulated than the Text
+// - Text width is divided into 2 or 3 more columns, according to the nr. of characters per row (40 or 60)
+$grid-width: $text-width / 4;
 
 // Notes on Responsiveness
 // - with $characters-per-row 40, 60 divided by 2, 3 we got a strange grid on mobiles
-// - making the grid more granular, ie $charachters-per-row 50 divided by 4 we have a two column grid also on mobiles.
+// - making the grid more granular, ie $charachters-per-row 50 divided by 4 we have a two column, good fitting grid also on mobiles.
+// - these two values must be fine tuned until a fine grid is obtained on all devices
 
 // Notes on font family & Responsiveness
 // - changing the font-family breaks the grid
 // - with Helvetica the 50/4 grid was ok, with Inconsolata the 55/4 grid was perfect
 
 
-// 8. Cell height
-// - four lines of text, it has nothing to do with the cell-width
-$cell-height: $gutter*4;
+// 8. Text height
+// - four lines of text, it has nothing to do with the $text-width
+$text-height: $gutter*4;
 
 
-// 9. Cell width
-// - The gutters must be added to the old cell-width
-// - This is already has to do with responsiveness
-$cell-width: $cell-width + 3 * $gutter;
+// 9. Text cell width
+// - The area of a Text cell in measured in grid cells
+// - The gutters must be added to the original $text-width
+// - This is already has to do with responsiveness. See below the mixin
+$text-cell-width: $text-width + 3 * $gutter;
 
 
 
@@ -67,22 +71,27 @@ $cell-width: $cell-width + 3 * $gutter;
 // ------------------------------------------------------------
 
 
-$double-column: ($cell-width + $gutter) * 2;
+// Instead of device dependent breakpoints we use column dependent breakpoints
+// - ie single-column, double-column and so on
 
-@mixin single-column {
-  @media only screen and (max-width: $double-column - 0.001) {
+$breakpoint-text-double-column: ($text-cell-width + $gutter) * 2;
+
+@mixin text-single-column {
+  @media only screen and (max-width: $breakpoint-text-double-column - 0.001) {
     @content;
   }
 }
 
-@mixin cell-width {
-  width: $cell-width;
+
+// A responsive Text Cell
+@mixin text-grid {
+  width: $text-cell-width;
   float: left;
   margin-right: $gutter;
   
-  @include single-column {
+  @include text-single-column {
     width: 100%;
-    max-width: $cell-width;
+    max-width: $text-cell-width;
     margin-right: 0;
     margin-bottom: $gutter;
   }

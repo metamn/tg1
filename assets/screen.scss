@@ -17,7 +17,7 @@ html {
     @include typographic-elements;
     
     article {
-      @include cell-width;
+      @include text-grid;
     }
     
     
@@ -38,7 +38,7 @@ html {
       border-right: 1px solid;
       border-bottom: 1px solid;
       width: calc(#{$grid-width} + #{$gutter} - 1px);
-      height: calc(#{$cell-height} + #{$gutter} - 1px);
+      height: calc(#{$text-height} + #{$gutter} - 1px);
       float: left;
     }
     
