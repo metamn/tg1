@@ -82,17 +82,15 @@ footer img {
   height: 1.25em;
 }
 
-/* line 20, other.scss */
-main section h3, main article figure figcaption, main article h1 {
+/* line 19, other.scss */
+article figure figcaption, article h1 {
   display: none;
 }
-/* line 24, other.scss */
-main article {
-  overflow: hidden;
-}
-/* line 27, other.scss */
-main article figure {
-  border: 1px solid;
+
+/* line 23, other.scss */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* line 13, screen.scss */
@@ -172,27 +170,25 @@ html body footer nav {
   margin-top: 1.25em;
 }
 /* line 32, screen.scss */
-html body main {
-  width: 100%;
-  float: left;
-}
-/* line 37, screen.scss */
-html body main article {
+html body article {
   width: 28.28125em;
   margin-right: 1.25em;
   float: left;
-  height: 11.25em;
   margin-bottom: 1.25em;
 }
-/* line 50, screen.scss */
+/* line 36, screen.scss */
+html body article.reboot {
+  display: none;
+}
+/* line 48, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
   z-index: -1;
 }
-/* line 59, screen.scss */
+/* line 57, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -200,14 +196,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 67, screen.scss */
+/* line 65, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 74, screen.scss */
+/* line 72, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

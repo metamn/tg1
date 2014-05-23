@@ -16,21 +16,14 @@ footer {
   }
 }
 
-main {
-  section h3, article figure figcaption, article h1 {
-    display: none;
-  }
-  
-  article {
-    overflow: hidden;
-    
-    figure {
-      border: 1px solid;
-    }
-  }
+article figure figcaption, article h1 {
+  display: none;
 }
 
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
 

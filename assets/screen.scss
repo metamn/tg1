@@ -29,14 +29,12 @@ html {
       }
     }
     
-    main {
-      @include block;
+    article {
+      @include col(3);
+      margin-bottom: $gutter;
       
-     
-      
-      article {
-        @include col(3);
-        @include row(2);
+      &.reboot {
+        display: none;
       }
     }
     
@@ -48,7 +46,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: block;
+      display: none;
       
       position: absolute;
       top: 0;
