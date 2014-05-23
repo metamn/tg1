@@ -19,6 +19,22 @@ html {
     
     
     
+    header {
+      @include block;
+      @include text-grid;
+      @include row(2);
+    }
+    
+    article {
+      @include col(2);
+      margin-bottom: $gutter;
+      
+      &.reboot {
+        display: none;
+      }
+    }
+    
+    
     footer {
       @include block;
       @include text-grid;
@@ -28,18 +44,6 @@ html {
         margin-top: $gutter;
       }
     }
-    
-    article {
-      @include col(3);
-      margin-bottom: $gutter;
-      
-      &.reboot {
-        display: none;
-      }
-    }
-    
-    
-    
     
     
     
