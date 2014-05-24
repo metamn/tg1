@@ -176,7 +176,11 @@ html body article {
 html body article.reboot {
   display: none;
 }
-/* line 38, screen.scss */
+/* line 36, screen.scss */
+html body article.next {
+  border: 1px solid blue;
+}
+/* line 42, screen.scss */
 html body footer {
   width: 100%;
   float: left;
@@ -187,7 +191,7 @@ html body footer {
   margin-bottom: 1.25em;
 }
 @media only screen and (max-width: 78.749em) {
-  /* line 38, screen.scss */
+  /* line 42, screen.scss */
   html body footer {
     width: 100%;
     max-width: 38.125em;
@@ -195,19 +199,19 @@ html body footer {
     margin-bottom: 1.25em;
   }
 }
-/* line 43, screen.scss */
+/* line 47, screen.scss */
 html body footer nav {
   margin-top: 1.25em;
 }
-/* line 52, screen.scss */
+/* line 56, screen.scss */
 html body #grid {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   opacity: .1;
   z-index: -1;
 }
-/* line 61, screen.scss */
+/* line 65, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -215,14 +219,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 69, screen.scss */
+/* line 73, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 76, screen.scss */
+/* line 80, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

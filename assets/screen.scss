@@ -32,6 +32,10 @@ html {
       &.reboot {
         display: none;
       }
+      
+      &.next {
+        border: 1px solid blue;
+      }
     }
     
     
@@ -50,7 +54,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;
