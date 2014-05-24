@@ -202,23 +202,33 @@ html body.frontpage article {
   height: 11.25em;
   margin-bottom: 1.25em;
 }
-/* line 46, screen.scss */
+@media only screen and (min-width: 90.001em) {
+  /* line 42, screen.scss */
+  html body.frontpage article {
+    width: 23.125em;
+    margin-right: 1.25em;
+    float: left;
+    height: 17.5em;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 45, screen.scss */
 html body.frontpage article.reboot, html body.frontpage article.next {
   display: none;
 }
-/* line 55, screen.scss */
+/* line 54, screen.scss */
 html body.portfolio main {
   width: 100%;
   float: left;
 }
-/* line 60, screen.scss */
+/* line 59, screen.scss */
 html body.portfolio article.intro {
   width: 38.125em;
   float: left;
   margin-right: 1.25em;
 }
 @media only screen and (max-width: 78.749em) {
-  /* line 60, screen.scss */
+  /* line 59, screen.scss */
   html body.portfolio article.intro {
     width: 100%;
     max-width: 38.125em;
@@ -226,7 +236,7 @@ html body.portfolio article.intro {
     margin-bottom: 1.25em;
   }
 }
-/* line 64, screen.scss */
+/* line 63, screen.scss */
 html body.portfolio article.image {
   width: 38.125em;
   float: left;
@@ -234,7 +244,7 @@ html body.portfolio article.image {
   margin-bottom: 6.25em !important;
 }
 @media only screen and (max-width: 78.749em) {
-  /* line 64, screen.scss */
+  /* line 63, screen.scss */
   html body.portfolio article.image {
     width: 100%;
     max-width: 38.125em;
@@ -242,52 +252,52 @@ html body.portfolio article.image {
     margin-bottom: 1.25em;
   }
 }
-/* line 67, screen.scss */
+/* line 66, screen.scss */
 html body.portfolio article.image figure, html body.portfolio article.image aside {
   width: 15em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 71, screen.scss */
+/* line 70, screen.scss */
 html body.portfolio article.image.tablet {
   width: 47.5em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 74, screen.scss */
+/* line 73, screen.scss */
 html body.portfolio article.image.tablet figure {
   width: 23.125em;
   margin-right: 1.25em;
   float: left;
   margin-right: 8.125em;
 }
-/* line 80, screen.scss */
+/* line 79, screen.scss */
 html body.portfolio article.image.desktop {
   width: 71.875em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 83, screen.scss */
+/* line 82, screen.scss */
 html body.portfolio article.image.desktop figure {
   width: 39.375em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 87, screen.scss */
+/* line 86, screen.scss */
 html body.portfolio article.image.desktop aside {
   width: 23.125em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 96, screen.scss */
+/* line 95, screen.scss */
 html body.portfolio article.services, html body.portfolio article.next, html body.portfolio article.logo, html body.portfolio article.logo-animated {
   display: none;
 }
-/* line 101, screen.scss */
+/* line 100, screen.scss */
 html body.portfolio .similar-projects {
   display: none;
 }
-/* line 113, screen.scss */
+/* line 112, screen.scss */
 html body #grid {
   display: none;
   position: absolute;
@@ -295,7 +305,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 122, screen.scss */
+/* line 121, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -303,14 +313,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 130, screen.scss */
+/* line 129, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 137, screen.scss */
+/* line 136, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

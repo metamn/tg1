@@ -66,9 +66,12 @@ $text-grid-width: $text-width + $gutter * 3;
 
 // v1
 // Responsiveness
+// Every element has own breakpoints and responsive rules !!!
 // ------------------------------------------------------------
 
 
+// 1. Text box
+// -------------
 // Instead of device dependent breakpoints we use column dependent breakpoints
 // - ie single-column, double-column and so on
 
@@ -92,6 +95,24 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
     max-width: $text-grid-width;
     margin-right: 0;
     margin-bottom: $gutter;
+  }
+}
+
+
+
+// 2. Portfolio items
+// ------------------
+
+
+@mixin portfolio-grid {
+  $breakpoint-large-screen: 90em; // 1440px
+  
+  @include col(2);
+  @include row(2);
+  
+  @media only screen and (min-width: $breakpoint-large-screen + 0.001) {
+    @include col(3);
+    @include row(3);
   }
 }
 

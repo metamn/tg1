@@ -40,8 +40,7 @@ html {
     
     &.frontpage {
       article {
-        @include col(2);
-        @include row(2);
+        @include portfolio-grid;
         
         &.reboot, &.next {
           display: none;
