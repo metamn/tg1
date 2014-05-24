@@ -25,17 +25,6 @@ html {
       @include row(2);
     }
     
-    article {
-      @include col(2);
-      @include row(2);
-      
-      &.reboot, &.next {
-        display: none;
-      }
-      
-    }
-    
-    
     footer {
       @include block;
       @include text-grid;
@@ -49,11 +38,67 @@ html {
     }
     
     
+    &.frontpage {
+      article {
+        @include col(2);
+        @include row(2);
+        
+        &.reboot, &.next {
+          display: none;
+        }
+        
+      }
+    }
+    
+    
+    &.portfolio {
+      main {
+        @include block;
+      }
+      
+      article {
+        &.intro {
+          @include text-grid;
+        }
+        
+        &.image {
+          margin-bottom: $grid-height + $gutter;
+          figure, aside {
+            @include col(3);
+          }
+          
+          aside {
+            margin-right: $grid-width + $gutter;
+            margin-bottom: $grid-height + $gutter;
+            margin-top: $grid-height + $gutter;
+          }
+          
+          &.desktop {
+            figure {
+              @include col(6);
+            }
+          }
+        }
+        
+        &.services, &.next, &.logo, &.logo-animated {
+          display: none;
+        }
+      }
+      
+      .similar-projects {
+        display: none;
+      }
+    }
+    
+    
+    
+    
+    
     
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;

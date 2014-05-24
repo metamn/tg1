@@ -16,7 +16,11 @@ footer {
   }
 }
 
-article figure figcaption, article h1 {
+.frontpage article figure figcaption, .frontpage article h1 {
+  display: none;
+}
+
+.portfolio article h3 {
   display: none;
 }
 

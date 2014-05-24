@@ -44,6 +44,7 @@ $grid-width: $text-width / 5;
 // 8. Text height
 // - four lines of text, it has nothing to do with the $text-width
 $text-height: $gutter*4;
+$grid-height: $text-height;
 
 
 // 9. Text cell width
