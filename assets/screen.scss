@@ -56,45 +56,20 @@ html {
       }
       
       article {
+        &.image, &.services, &.next, &.logo, &.logo-animated {
+          display: none;
+        }
+        
         &.intro {
           @include text-grid;
         }
         
-        &.image {
-          @include text-grid;
-          
-          figure, aside {
-            @include col(2);
-          }
-          
-          &.tablet {
-            @include col(6);
-            
-            figure {
-              @include col(3);
-              margin-right: $grid-width + $gutter;
-            }
-          }
-          
-          &.desktop {
-            @include col(9);
-            
-            figure {
-              @include col(5);
-            }
-            
-            aside {
-              @include col(3);
-            }
-          }
-          
-          
-          margin-bottom: $grid-height + $gutter !important;
+        &.smartphone {
+          @include portfolio-item-with-story-for-smartphone;
+          display: block;
         }
         
-        &.services, &.next, &.logo, &.logo-animated {
-          display: none;
-        }
+        
       }
       
       .similar-projects {
@@ -110,7 +85,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;

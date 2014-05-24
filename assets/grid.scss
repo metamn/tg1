@@ -102,8 +102,6 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 // 2. Portfolio items
 // ------------------
-
-
 @mixin portfolio-grid {
   $breakpoint-large-screen: 90em; // 1440px
   
@@ -116,6 +114,48 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
   }
 }
 
+
+
+
+// 3. Portfolio item with story, for Smartphone
+@mixin portfolio-item-with-story-for-smartphone {
+  $screenshot-width: 2 * $grid-width + 1 * $gutter;
+  $story-width: 2 * $grid-width + 1 * $gutter;
+  $screenshot-margin: $gutter;
+  $story-margin: $grid-width + $gutter;
+  $breakpoint-item-with-story: $screenshot-width + $story-width + $screenshot-margin + $story-margin; 
+  
+  width: $breakpoint-item-with-story;
+  float: left;
+  
+  figure {
+    width: $screenshot-width;
+    margin-right: $screenshot-margin;
+    float: left;
+  }
+  
+  aside {
+    width: $story-width;
+    margin-right: $story-margin;
+    float: left;
+  }
+  
+  @media only screen and (max-width: $breakpoint-item-with-story - 0.001) {
+    width: auto;
+    background: red;
+    
+    figure {
+      width: auto;
+      max-width: $screenshot-width;
+    }
+    
+    aside {
+      width: auto;
+      max-width: $text-grid-width;
+      margin-right: 0;
+    }
+  }
+}
 
 
 
