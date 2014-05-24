@@ -167,20 +167,17 @@ html body header {
 }
 /* line 28, screen.scss */
 html body article {
-  width: 18.4375em;
+  width: 15em;
   margin-right: 1.25em;
   float: left;
+  height: 11.25em;
   margin-bottom: 1.25em;
 }
 /* line 32, screen.scss */
-html body article.reboot {
+html body article.reboot, html body article.next {
   display: none;
 }
-/* line 36, screen.scss */
-html body article.next {
-  border: 1px solid blue;
-}
-/* line 42, screen.scss */
+/* line 39, screen.scss */
 html body footer {
   width: 100%;
   float: left;
@@ -189,9 +186,11 @@ html body footer {
   margin-right: 1.25em;
   height: 11.25em;
   margin-bottom: 1.25em;
+  margin-top: 6.25em;
+  margin-left: 8.125em;
 }
 @media only screen and (max-width: 78.749em) {
-  /* line 42, screen.scss */
+  /* line 39, screen.scss */
   html body footer {
     width: 100%;
     max-width: 38.125em;
@@ -199,34 +198,34 @@ html body footer {
     margin-bottom: 1.25em;
   }
 }
-/* line 47, screen.scss */
+/* line 46, screen.scss */
 html body footer nav {
   margin-top: 1.25em;
 }
-/* line 56, screen.scss */
+/* line 55, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
   z-index: -1;
 }
-/* line 65, screen.scss */
+/* line 64, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
-  width: calc(8.59375em + 1.25em - 1px);
+  width: calc(6.875em + 1.25em - 1px);
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 73, screen.scss */
+/* line 72, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 80, screen.scss */
+/* line 79, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

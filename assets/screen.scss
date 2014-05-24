@@ -27,15 +27,12 @@ html {
     
     article {
       @include col(2);
-      margin-bottom: $gutter;
+      @include row(2);
       
-      &.reboot {
+      &.reboot, &.next {
         display: none;
       }
       
-      &.next {
-        border: 1px solid blue;
-      }
     }
     
     
@@ -43,6 +40,8 @@ html {
       @include block;
       @include text-grid;
       @include row(2);
+      margin-top: $text-height + $gutter;
+      margin-left: $grid-width + $gutter;
       
       nav {
         margin-top: $gutter;
@@ -54,7 +53,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: block;
+      display: none;
       
       position: absolute;
       top: 0;

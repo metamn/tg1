@@ -24,13 +24,12 @@ $characters-per-row: 55;
 // - Based on Text width the Grid with is calculated
 // - This formula is a guess, it was measured by hand
 $text-width: $characters-per-row * $gutter/2;
-$text-width: $characters-per-row * $gutter/2;
 
 
 // 7. Grid width
 // - Grid refers to other elements than text, it is more granulated than the Text
 // - Text width is divided into 2 or 3 more columns, according to the nr. of characters per row (40 or 60)
-$grid-width: $text-width / 4;
+$grid-width: $text-width / 5;
 
 // Notes on Responsiveness
 // - with $characters-per-row 40, 60 divided by 2, 3 we got a strange grid on mobiles
