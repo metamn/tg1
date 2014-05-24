@@ -180,7 +180,6 @@ html body footer {
   height: 11.25em;
   margin-bottom: 1.25em;
   margin-top: 6.25em;
-  margin-left: 8.125em;
 }
 @media only screen and (max-width: 78.749em) {
   /* line 28, screen.scss */
@@ -229,43 +228,74 @@ html body.portfolio article.intro {
 }
 /* line 64, screen.scss */
 html body.portfolio article.image {
-  margin-bottom: 6.25em;
+  width: 38.125em;
+  float: left;
+  margin-right: 1.25em;
+  margin-bottom: 6.25em !important;
 }
-/* line 66, screen.scss */
+@media only screen and (max-width: 78.749em) {
+  /* line 64, screen.scss */
+  html body.portfolio article.image {
+    width: 100%;
+    max-width: 38.125em;
+    margin-right: 0;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 67, screen.scss */
 html body.portfolio article.image figure, html body.portfolio article.image aside {
-  width: 23.125em;
+  width: 15em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 70, screen.scss */
-html body.portfolio article.image aside {
-  margin-right: 8.125em;
-  margin-bottom: 6.25em;
-  margin-top: 6.25em;
-}
-/* line 77, screen.scss */
-html body.portfolio article.image.desktop figure {
+/* line 71, screen.scss */
+html body.portfolio article.image.tablet {
   width: 47.5em;
   margin-right: 1.25em;
   float: left;
 }
+/* line 74, screen.scss */
+html body.portfolio article.image.tablet figure {
+  width: 23.125em;
+  margin-right: 1.25em;
+  float: left;
+  margin-right: 8.125em;
+}
+/* line 80, screen.scss */
+html body.portfolio article.image.desktop {
+  width: 71.875em;
+  margin-right: 1.25em;
+  float: left;
+}
 /* line 83, screen.scss */
+html body.portfolio article.image.desktop figure {
+  width: 39.375em;
+  margin-right: 1.25em;
+  float: left;
+}
+/* line 87, screen.scss */
+html body.portfolio article.image.desktop aside {
+  width: 23.125em;
+  margin-right: 1.25em;
+  float: left;
+}
+/* line 96, screen.scss */
 html body.portfolio article.services, html body.portfolio article.next, html body.portfolio article.logo, html body.portfolio article.logo-animated {
   display: none;
 }
-/* line 88, screen.scss */
+/* line 101, screen.scss */
 html body.portfolio .similar-projects {
   display: none;
 }
-/* line 100, screen.scss */
+/* line 113, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
   z-index: -1;
 }
-/* line 109, screen.scss */
+/* line 122, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -273,14 +303,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 117, screen.scss */
+/* line 130, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 124, screen.scss */
+/* line 137, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

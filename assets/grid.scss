@@ -47,11 +47,9 @@ $text-height: $gutter*4;
 $grid-height: $text-height;
 
 
-// 9. Text cell width
-// - The area of a Text cell in measured in grid cells
-// - The gutters must be added to the original $text-width
-// - This is already has to do with responsiveness. See below the mixin
-$text-cell-width: $text-width + 3 * $gutter;
+// 9. Text grid width
+// - The area of a Text grid, now measured in grid cells, ie. the gutters must be added to the original $text-width
+$text-grid-width: $text-width + $gutter * 3;
 
 
 
@@ -74,7 +72,7 @@ $text-cell-width: $text-width + 3 * $gutter;
 // Instead of device dependent breakpoints we use column dependent breakpoints
 // - ie single-column, double-column and so on
 
-$breakpoint-text-double-column: ($text-cell-width + $gutter) * 2;
+$breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 @mixin text-single-column {
   @media only screen and (max-width: $breakpoint-text-double-column - 0.001) {
@@ -85,13 +83,13 @@ $breakpoint-text-double-column: ($text-cell-width + $gutter) * 2;
 
 // A responsive Text Cell
 @mixin text-grid {
-  width: $text-cell-width;
+  width: $text-grid-width;
   float: left;
   margin-right: $gutter;
   
   @include text-single-column {
     width: 100%;
-    max-width: $text-cell-width;
+    max-width: $text-grid-width;
     margin-right: 0;
     margin-bottom: $gutter;
   }

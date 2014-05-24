@@ -30,7 +30,7 @@ html {
       @include text-grid;
       @include row(2);
       margin-top: $text-height + $gutter;
-      margin-left: $grid-width + $gutter;
+      //margin-left: $grid-width + $gutter;
       
       nav {
         margin-top: $gutter;
@@ -62,22 +62,35 @@ html {
         }
         
         &.image {
-          margin-bottom: $grid-height + $gutter;
+          @include text-grid;
+          
           figure, aside {
-            @include col(3);
+            @include col(2);
           }
           
-          aside {
-            margin-right: $grid-width + $gutter;
-            margin-bottom: $grid-height + $gutter;
-            margin-top: $grid-height + $gutter;
+          &.tablet {
+            @include col(6);
+            
+            figure {
+              @include col(3);
+              margin-right: $grid-width + $gutter;
+            }
           }
           
           &.desktop {
+            @include col(9);
+            
             figure {
-              @include col(6);
+              @include col(5);
+            }
+            
+            aside {
+              @include col(3);
             }
           }
+          
+          
+          margin-bottom: $grid-height + $gutter !important;
         }
         
         &.services, &.next, &.logo, &.logo-animated {
@@ -98,7 +111,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: block;
+      display: none;
       
       position: absolute;
       top: 0;
