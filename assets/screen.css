@@ -357,7 +357,7 @@ html body.story article.desktop aside {
 }
 /* line 119, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
