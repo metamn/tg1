@@ -106,7 +106,7 @@ html body {
   font-size: 100%;
   line-height: 1.25;
 }
-/* line 52, typography.scss */
+/* line 51, typography.scss */
 html body h1 {
   font-weight: bold;
   margin-top: 1.25em;
@@ -123,7 +123,7 @@ html body h1 {
   color: #fff;
   background: #000;
 }
-/* line 56, typography.scss */
+/* line 55, typography.scss */
 html body h2 {
   font-weight: bold;
   margin-top: 1.25em;
@@ -134,7 +134,7 @@ html body h2 {
   padding-bottom: 0.625em;
   margin-bottom: 1.25em;
 }
-/* line 60, typography.scss */
+/* line 59, typography.scss */
 html body h3 {
   font-weight: bold;
   margin-top: 1.25em;
@@ -142,25 +142,24 @@ html body h3 {
   margin-bottom: calc(1.25em - 1px);
   border-bottom: 1px solid;
 }
-/* line 64, typography.scss */
+/* line 63, typography.scss */
 html body h4 {
   font-weight: bold;
   margin-top: 1.25em;
 }
-/* line 68, typography.scss */
+/* line 67, typography.scss */
 html body em {
-  border: 1px solid;
-  padding: 0.10417em 0.3125em;
+  border-bottom: 1px dashed;
 }
-/* line 72, typography.scss */
+/* line 71, typography.scss */
 html body mark {
   padding: 0.15625em;
 }
-/* line 76, typography.scss */
+/* line 75, typography.scss */
 html body figcaption {
   font-style: italic;
 }
-/* line 83, typography.scss */
+/* line 82, typography.scss */
 html body p + p {
   margin-top: 1.25em;
 }
@@ -296,11 +295,11 @@ html body.portfolio article.desktop {
 html body.portfolio .similar-projects {
   display: none;
 }
-/* line 94, screen.scss */
+/* line 93, screen.scss */
 html body.story article aside, html body.story article figcaption {
   display: block;
 }
-/* line 98, screen.scss */
+/* line 97, screen.scss */
 html body.story article.smartphone {
   width: 100%;
   max-width: 39.375em;
@@ -323,7 +322,7 @@ html body.story article.smartphone aside {
   float: left;
   margin-right: 0;
 }
-/* line 102, screen.scss */
+/* line 101, screen.scss */
 html body.story article.tablet {
   width: 100%;
   max-width: 55.625em;
@@ -346,7 +345,7 @@ html body.story article.tablet aside {
   float: left;
   margin-right: 0;
 }
-/* line 107, screen.scss */
+/* line 106, screen.scss */
 html body.story article.desktop {
   width: 100%;
   max-width: 80em;
@@ -369,7 +368,7 @@ html body.story article.desktop aside {
   float: left;
   margin-right: 0;
 }
-/* line 116, screen.scss */
+/* line 115, screen.scss */
 html body.article article {
   width: 31.25em;
   float: left;
@@ -377,7 +376,7 @@ html body.article article {
   margin-right: 8.125em;
 }
 @media only screen and (max-width: 64.999em) {
-  /* line 116, screen.scss */
+  /* line 115, screen.scss */
   html body.article article {
     width: 100%;
     max-width: 31.25em;
@@ -386,7 +385,7 @@ html body.article article {
   }
 }
 @media only screen and (max-width: 85.374em) {
-  /* line 116, screen.scss */
+  /* line 115, screen.scss */
   html body.article article {
     margin-right: 1.25em;
   }
@@ -399,52 +398,58 @@ html body.article article {
     left: -16.25em;
   }
 }
-/* line 137, typography.scss */
+/* line 142, typography.scss */
 html body.article article ul {
   list-style-type: square;
 }
-/* line 141, typography.scss */
+/* line 146, typography.scss */
 html body.article article ol {
   list-style-type: decimal;
 }
-/* line 145, typography.scss */
+/* line 150, typography.scss */
 html body.article article table {
   width: 100%;
   display: table !important;
 }
-/* line 112, typography.scss */
+/* line 111, typography.scss */
 html body.article article table thead {
-  border-bottom: 1px solid;
+  border-bottom: 1px dashed;
 }
-/* line 116, typography.scss */
+/* line 115, typography.scss */
 html body.article article table thead th, html body.article article table tbody td {
   padding: 0.625em;
   padding-left: 0;
 }
-/* line 122, typography.scss */
+/* line 121, typography.scss */
 html body.article article table tbody td {
-  border-bottom: 1px solid;
+  border-bottom: 1px dashed;
 }
-/* line 149, typography.scss */
+/* line 154, typography.scss */
 html body.article article blockquote {
   font-style: italic;
   border: 1px dashed;
   padding: 1.25em;
   width: calc(100% - 2.5em - 2px);
 }
-/* line 155, typography.scss */
-html body.article article table, html body.article article blockquote {
+/* line 158, typography.scss */
+html body.article article figure {
+  border: 1px dashed;
+  padding: 1.25em;
+  width: calc(100% - 2.5em - 2px);
+}
+/* line 164, typography.scss */
+html body.article article table, html body.article article blockquote, html body.article article figure {
   margin: 1.25em 0;
 }
-/* line 159, typography.scss */
+/* line 168, typography.scss */
 html body.article article figure + figure {
   margin-top: 1.25em;
 }
-/* line 121, screen.scss */
+/* line 120, screen.scss */
 html body.article article.intro p {
   font-weight: bold;
 }
-/* line 133, screen.scss */
+/* line 132, screen.scss */
 html body #grid {
   display: none;
   position: absolute;
@@ -452,7 +457,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 142, screen.scss */
+/* line 141, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -460,14 +465,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 150, screen.scss */
+/* line 149, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 157, screen.scss */
+/* line 156, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

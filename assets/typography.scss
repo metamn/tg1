@@ -36,8 +36,7 @@
 
 
 @mixin em {
-  border: 1px solid;
-  padding: $gutter/12 $gutter/4;
+  border-bottom: 1px dashed;
 }
 
 @mixin mark {
@@ -110,7 +109,7 @@
   display: table !important;
   
   thead {
-    border-bottom: 1px solid;
+    border-bottom: 1px dashed;
   }
   
   thead th, tbody td {
@@ -120,9 +119,15 @@
   
   tbody {
     td {
-      border-bottom: 1px solid;
+      border-bottom: 1px dashed;
     }
   }
+}
+
+@mixin figure {
+  border: 1px dashed;
+  padding: $gutter;
+  width: calc(100% - #{$gutter*2} - 2px);
 }
 
 @mixin blockquote {
@@ -149,10 +154,14 @@
   blockquote {
     @include blockquote;
   }
+  
+  figure {
+    @include figure;
+  }
 }
 
 @mixin extended-typographic-elements-spacing {
-  table, blockquote {
+  table, blockquote, figure {
     margin: $gutter 0;
   }
   
