@@ -173,6 +173,14 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
   @media only screen and (max-width: $breakpoint-normal-screen - 0.001)  {
     margin-right: $gutter;
   }
+  
+  @media only screen and (min-width: $breakpoint-small-screen + 0.001)  {
+    &.long {
+      margin-top: 2 * ($grid-width + $gutter);
+      position: relative;
+      left: -2 * ($grid-width + $gutter);
+    }
+  }
 }
 
 

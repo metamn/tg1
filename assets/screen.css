@@ -377,9 +377,17 @@ html body.article article {
     margin-right: 1.25em;
   }
 }
+@media only screen and (min-width: 64.001em) {
+  /* line 178, grid.scss */
+  html body.article article.long {
+    margin-top: 16.25em;
+    position: relative;
+    left: -16.25em;
+  }
+}
 /* line 125, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
