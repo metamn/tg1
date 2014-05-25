@@ -125,6 +125,11 @@ html {
     
     
     &.article {
+      header {
+        @include row(2);
+      }
+      
+      // It is important to have a height for <header> to push contents below the title and preserve the grid defined below
       article {
         @include article-grid;
         @include extended-typographic-settings;
@@ -143,7 +148,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: block;
+      display: none;
       
       position: absolute;
       top: 0;
