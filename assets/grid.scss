@@ -172,6 +172,10 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
   
   @media only screen and (max-width: $breakpoint-normal-screen - 0.001)  {
     margin-right: $gutter;
+    
+    ol, ul {
+      margin-left: $gutter + $gutter/4;
+    }
   }
   
   @media only screen and (min-width: $breakpoint-small-screen + 0.001)  {

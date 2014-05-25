@@ -389,9 +389,13 @@ html body.article article {
   html body.article article {
     margin-right: 1.25em;
   }
+  /* line 176, grid.scss */
+  html body.article article ol, html body.article article ul {
+    margin-left: 1.5625em;
+  }
 }
 @media only screen and (min-width: 64.001em) {
-  /* line 178, grid.scss */
+  /* line 182, grid.scss */
   html body.article article.long {
     margin-top: 16.25em;
     position: relative;
@@ -442,7 +446,7 @@ html body.article article table, html body.article article blockquote, html body
   margin: 1.25em 0;
 }
 /* line 168, typography.scss */
-html body.article article figure + figure {
+html body.article article figure + figure, html body.article article ol + p, html body.article article ul + p {
   margin-top: 1.25em;
 }
 /* line 120, screen.scss */

@@ -95,7 +95,9 @@
 // -------------
 
 
-
+// ol, ul will have a margin when they are in the first column
+// - otherwise the decimal and the square is not visible
+// - this is done in the grid.scss when defining the article
 @mixin ol {
   list-style-type: decimal;
 }
@@ -165,7 +167,7 @@
     margin: $gutter 0;
   }
   
-  figure + figure {
+  figure + figure, ol + p, ul + p {
     margin-top: $gutter;
   }
 }
