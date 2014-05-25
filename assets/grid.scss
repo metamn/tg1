@@ -70,9 +70,15 @@ $text-grid-width: $text-width + $gutter * 3;
 // ------------------------------------------------------------
 
 
+
+$breakpoint-large-screen: 90em; // 1440px
+$breakpoint-small-screen: 64em; // 1024px
+
+
+
 // 1. Text box
 // -------------
-// Instead of device dependent breakpoints we use column dependent breakpoints
+// Instead of device dependent breakpoints we use column dependent breakpoints whenever possible
 // - ie single-column, double-column and so on
 
 $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
@@ -103,7 +109,6 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 // 2. Portfolio items
 // ------------------
 @mixin portfolio-grid {
-  $breakpoint-large-screen: 90em; // 1440px
   
   @include col(2);
   @include row(2);
@@ -116,18 +121,27 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 
 
+
 // 3. Footer
 // -------------
 @mixin footer-grid {
   margin-top: $text-height + $gutter;
   margin-bottom: $text-height + $gutter;
   
-  $breakpoint-small-screen: 64em; // 1024px
   @media only screen and (min-width: $breakpoint-small-screen) {
     margin-left: $grid-width + $gutter;
   }
 }
 
+
+
+
+// 3. Smartphone Screenshot
+@mixin smartphone-screenshot-grid {
+  @media only screen and (min-width: $breakpoint-small-screen + 0.001) {
+    margin-right: $grid-width + $gutter;
+  }
+}
 
 
 
@@ -177,8 +191,14 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 
 
-@mixin col($nr) {
-  width: $nr * $grid-width + ($nr - 1) * $gutter;
+@mixin col($nr, $responsive: false) {
+  @if ($responsive == false) {
+    width: $nr * $grid-width + ($nr - 1) * $gutter;
+  } @else {
+    width: 100%;
+    max-width: $nr * $grid-width + ($nr - 1) * $gutter;
+  }
+  
   margin-right: $gutter;
   float: left;
 }

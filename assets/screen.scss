@@ -55,7 +55,7 @@ html {
       }
       
       article {
-        &.image, &.services, &.next, &.logo, &.logo-animated {
+        &.services, &.next, &.logo, &.logo-animated {
           display: none;
         }
         
@@ -63,13 +63,21 @@ html {
           @include text-grid;
         }
         
+        &.image {
+          margin-bottom: $gutter;
+        }
+        
         &.smartphone {
-          @include portfolio-item-with-story-for-smartphone;
-          display: block;
-          
-          aside, figcaption {
-            display: none;
-          }
+          @include col(2, responsive);
+          @include smartphone-screenshot-grid;
+        }
+        
+        &.tablet {
+          @include col(3, responsive);
+        }
+        
+        &.desktop {
+          @include col(5, responsive);
         }
         
         
@@ -88,7 +96,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: block;
+      display: none;
       
       position: absolute;
       top: 0;
