@@ -55,7 +55,7 @@ html {
       }
       
       article {
-        &.services, &.next, &.logo, &.logo-animated {
+        aside, figcaption, &.services, &.next, &.logo, &.logo-animated {
           display: none;
         }
         
@@ -78,9 +78,7 @@ html {
         
         &.desktop {
           @include col(5, responsive);
-        }
-        
-        
+        }   
       }
       
       .similar-projects {
@@ -89,6 +87,29 @@ html {
     }
     
     
+    &.story {
+    
+      article {
+        aside, figcaption {
+          display: block;
+        }
+        
+        &.smartphone {
+          @include story-grid(2, $gutter, 3, 0);
+        }
+        
+        &.tablet {
+          @include story-grid(4, $gutter, 3, 0);
+        }
+        
+        
+        &.desktop {
+          @include story-grid(7, $gutter, 3, 0);
+        }
+      }
+    
+    }
+    
     
     
     
@@ -96,7 +117,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;

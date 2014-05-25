@@ -136,7 +136,7 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 
 
-// 3. Smartphone Screenshot
+// 4. Smartphone Screenshot
 @mixin smartphone-screenshot-grid {
   @media only screen and (min-width: $breakpoint-small-screen + 0.001) {
     margin-right: $grid-width + $gutter;
@@ -147,43 +147,18 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 
 
-// 3. Portfolio item with story, for Smartphone
-@mixin portfolio-item-with-story-for-smartphone {
-  $screenshot-width: 2 * $grid-width + 1 * $gutter;
-  $story-width: 2 * $grid-width + 1 * $gutter;
-  $screenshot-margin: $gutter;
-  $story-margin: $grid-width + $gutter;
-  $breakpoint-item-with-story: $screenshot-width + $story-width + $screenshot-margin + $story-margin; 
-  
-  width: $breakpoint-item-with-story;
-  float: left;
+// 5. Portfolio item with story
+@mixin story-grid($figure-width, $figure-margin, $story-width, $story-margin) {
+  @include col($figure-width + $story-width, responsive);
   
   figure {
-    width: $screenshot-width;
-    margin-right: $screenshot-margin;
-    float: left;
+    @include col($figure-width, responsive);
+    margin-right: $figure-margin;
   }
   
   aside {
-    width: $story-width;
+    @include col($story-width, responsive);
     margin-right: $story-margin;
-    float: left;
-  }
-  
-  @media only screen and (max-width: $breakpoint-item-with-story - 0.001) {
-    width: auto;
-    background: red;
-    
-    figure {
-      width: auto;
-      max-width: $screenshot-width;
-    }
-    
-    aside {
-      width: auto;
-      max-width: $text-grid-width;
-      margin-right: 0;
-    }
   }
 }
 
