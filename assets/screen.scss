@@ -29,8 +29,7 @@ html {
       @include block;
       @include text-grid;
       @include row(2);
-      margin-top: $text-height + $gutter;
-      //margin-left: $grid-width + $gutter;
+      @include footer-grid;
       
       nav {
         margin-top: $gutter;
@@ -67,6 +66,10 @@ html {
         &.smartphone {
           @include portfolio-item-with-story-for-smartphone;
           display: block;
+          
+          aside, figcaption {
+            display: none;
+          }
         }
         
         

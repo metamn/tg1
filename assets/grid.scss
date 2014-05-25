@@ -116,6 +116,22 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 
 
 
+// 3. Footer
+// -------------
+@mixin footer-grid {
+  margin-top: $text-height + $gutter;
+  margin-bottom: $text-height + $gutter;
+  
+  $breakpoint-small-screen: 64em; // 1024px
+  @media only screen and (min-width: $breakpoint-small-screen) {
+    margin-left: $grid-width + $gutter;
+  }
+}
+
+
+
+
+
 
 // 3. Portfolio item with story, for Smartphone
 @mixin portfolio-item-with-story-for-smartphone {
