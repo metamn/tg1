@@ -245,18 +245,30 @@ html body.portfolio main {
   float: left;
 }
 /* line 56, screen.scss */
-html body.portfolio article aside, html body.portfolio article figcaption, html body.portfolio article.services, html body.portfolio article.next, html body.portfolio article.logo, html body.portfolio article.logo-animated {
+html body.portfolio article aside, html body.portfolio article figcaption, html body.portfolio article.services, html body.portfolio article.next, html body.portfolio article.logo-animated {
   display: none;
 }
 /* line 60, screen.scss */
+html body.portfolio article.logo {
+  width: 15em;
+  margin-right: 1.25em;
+  float: left;
+}
+/* line 63, screen.scss */
+html body.portfolio article.logo figcaption {
+  display: none;
+}
+/* line 68, screen.scss */
 html body.portfolio article.intro {
   width: 31.25em;
   float: left;
   margin-right: 1.25em;
+  margin-bottom: 1.25em;
+  margin-top: 1.25em;
   font-weight: bold;
 }
 @media only screen and (max-width: 64.999em) {
-  /* line 60, screen.scss */
+  /* line 68, screen.scss */
   html body.portfolio article.intro {
     width: 100%;
     max-width: 31.25em;
@@ -264,11 +276,15 @@ html body.portfolio article.intro {
     margin-bottom: 1.25em;
   }
 }
-/* line 65, screen.scss */
+/* line 76, screen.scss */
 html body.portfolio article.image {
   margin-bottom: 1.25em;
 }
-/* line 69, screen.scss */
+/* line 79, screen.scss */
+html body.portfolio article.image figure {
+  margin-bottom: 1.25em;
+}
+/* line 84, screen.scss */
 html body.portfolio article.smartphone {
   width: 100%;
   max-width: 15em;
@@ -276,34 +292,34 @@ html body.portfolio article.smartphone {
   float: left;
 }
 @media only screen and (min-width: 64.001em) {
-  /* line 69, screen.scss */
+  /* line 84, screen.scss */
   html body.portfolio article.smartphone {
     margin-right: 8.125em;
   }
 }
-/* line 74, screen.scss */
+/* line 89, screen.scss */
 html body.portfolio article.tablet {
   width: 100%;
   max-width: 23.125em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 78, screen.scss */
+/* line 93, screen.scss */
 html body.portfolio article.desktop {
   width: 100%;
   max-width: 39.375em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 83, screen.scss */
+/* line 98, screen.scss */
 html body.portfolio .similar-projects {
   display: none;
 }
-/* line 91, screen.scss */
+/* line 106, screen.scss */
 html body.story article aside, html body.story article figcaption {
   display: block;
 }
-/* line 95, screen.scss */
+/* line 110, screen.scss */
 html body.story article.smartphone {
   width: 100%;
   max-width: 39.375em;
@@ -326,7 +342,7 @@ html body.story article.smartphone aside {
   float: left;
   margin-right: 0;
 }
-/* line 99, screen.scss */
+/* line 114, screen.scss */
 html body.story article.tablet {
   width: 100%;
   max-width: 55.625em;
@@ -349,7 +365,7 @@ html body.story article.tablet aside {
   float: left;
   margin-right: 0;
 }
-/* line 104, screen.scss */
+/* line 119, screen.scss */
 html body.story article.desktop {
   width: 100%;
   max-width: 80em;
@@ -372,7 +388,7 @@ html body.story article.desktop aside {
   float: left;
   margin-right: 0;
 }
-/* line 113, screen.scss */
+/* line 128, screen.scss */
 html body.article article {
   width: 31.25em;
   float: left;
@@ -380,7 +396,7 @@ html body.article article {
   margin-right: 8.125em;
 }
 @media only screen and (max-width: 64.999em) {
-  /* line 113, screen.scss */
+  /* line 128, screen.scss */
   html body.article article {
     width: 100%;
     max-width: 31.25em;
@@ -389,7 +405,7 @@ html body.article article {
   }
 }
 @media only screen and (max-width: 85.374em) {
-  /* line 113, screen.scss */
+  /* line 128, screen.scss */
   html body.article article {
     margin-right: 1.25em;
   }
@@ -453,11 +469,11 @@ html body.article article table, html body.article article blockquote, html body
 html body.article article figure + figure, html body.article article ol + p, html body.article article ul + p {
   margin-top: 1.25em;
 }
-/* line 118, screen.scss */
+/* line 133, screen.scss */
 html body.article article.intro p {
   font-weight: bold;
 }
-/* line 130, screen.scss */
+/* line 145, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -465,7 +481,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 139, screen.scss */
+/* line 154, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -473,14 +489,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 147, screen.scss */
+/* line 162, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 154, screen.scss */
+/* line 169, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

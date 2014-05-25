@@ -53,17 +53,32 @@ html {
       }
       
       article {
-        aside, figcaption, &.services, &.next, &.logo, &.logo-animated {
+        aside, figcaption, &.services, &.next, &.logo-animated {
           display: none;
+        }
+        
+        &.logo {
+          @include col(2);
+          
+          figcaption {
+            display: none;
+          }
         }
         
         &.intro {
           @include text-grid;
+          margin-bottom: $gutter;
+          margin-top: $gutter;
+          
           @include lead;
         }
         
         &.image {
           margin-bottom: $gutter;
+          
+          figure {
+            margin-bottom: $gutter;
+          }
         }
         
         &.smartphone {
