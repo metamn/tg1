@@ -22,13 +22,11 @@ html {
     header {
       @include block;
       @include text-grid;
-      @include row(2);
     }
     
     footer {
       @include block;
       @include text-grid;
-      @include row(2);
       @include footer-grid;
       
       nav {
@@ -130,7 +128,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;

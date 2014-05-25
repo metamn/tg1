@@ -66,7 +66,8 @@ $text-grid-width: 4 * $grid-width + 3 * $gutter;
 
 // v1
 // Responsiveness
-// Every element has own breakpoints and responsive rules !!!
+// Every element has own breakpoints and responsive rules
+// Instead of device dependent breakpoints we use column dependent breakpoints whenever possible. ie single column, two-column
 // ------------------------------------------------------------
 
 
@@ -77,27 +78,14 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 
 
 
-// 1. Text box
-// -------------
-// Instead of device dependent breakpoints we use column dependent breakpoints whenever possible
-// - ie single-column, double-column and so on
-
-$breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
-
-@mixin text-single-column {
-  @media only screen and (max-width: $breakpoint-text-double-column - 0.001) {
-    @content;
-  }
-}
-
-
-// A responsive Text Cell
+// 1. Text box for header and footer
 @mixin text-grid {
   width: $text-grid-width;
   float: left;
   margin-right: $gutter;
   
-  @include text-single-column {
+  $breakpoint-double-column: ($text-grid-width + $gutter) * 2;
+  @media only screen and (max-width: $breakpoint-double-column - 0.001) {
     width: 100%;
     max-width: $text-grid-width;
     margin-right: 0;
@@ -110,9 +98,14 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
 // 2. Portfolio items
 // ------------------
 @mixin portfolio-grid {
-  
   @include col(2);
   @include row(2);
+  
+  $breakpoint-double-column: ($grid-width + $gutter) * 4;
+  @media only screen and (max-width: $breakpoint-double-column - 0.001) {
+    @include block;
+    height: auto;
+  }
   
   @media only screen and (min-width: $breakpoint-large-screen + 0.001) {
     @include col(3);
