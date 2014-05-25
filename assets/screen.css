@@ -155,17 +155,17 @@ html body p + p {
 html body header {
   width: 100%;
   float: left;
-  width: 38.125em;
+  width: 31.25em;
   float: left;
   margin-right: 1.25em;
   height: 11.25em;
   margin-bottom: 1.25em;
 }
-@media only screen and (max-width: 78.749em) {
+@media only screen and (max-width: 64.999em) {
   /* line 22, screen.scss */
   html body header {
     width: 100%;
-    max-width: 38.125em;
+    max-width: 31.25em;
     margin-right: 0;
     margin-bottom: 1.25em;
   }
@@ -174,7 +174,7 @@ html body header {
 html body footer {
   width: 100%;
   float: left;
-  width: 38.125em;
+  width: 31.25em;
   float: left;
   margin-right: 1.25em;
   height: 11.25em;
@@ -182,11 +182,11 @@ html body footer {
   margin-top: 6.25em;
   margin-bottom: 6.25em;
 }
-@media only screen and (max-width: 78.749em) {
+@media only screen and (max-width: 64.999em) {
   /* line 28, screen.scss */
   html body footer {
     width: 100%;
-    max-width: 38.125em;
+    max-width: 31.25em;
     margin-right: 0;
     margin-bottom: 1.25em;
   }
@@ -234,15 +234,15 @@ html body.portfolio article aside, html body.portfolio article figcaption, html 
 }
 /* line 62, screen.scss */
 html body.portfolio article.intro {
-  width: 38.125em;
+  width: 31.25em;
   float: left;
   margin-right: 1.25em;
 }
-@media only screen and (max-width: 78.749em) {
+@media only screen and (max-width: 64.999em) {
   /* line 62, screen.scss */
   html body.portfolio article.intro {
     width: 100%;
-    max-width: 38.125em;
+    max-width: 31.25em;
     margin-right: 0;
     margin-bottom: 1.25em;
   }
@@ -293,7 +293,7 @@ html body.story article.smartphone {
   margin-right: 1.25em;
   float: left;
 }
-/* line 154, grid.scss */
+/* line 155, grid.scss */
 html body.story article.smartphone figure {
   width: 100%;
   max-width: 15em;
@@ -301,7 +301,7 @@ html body.story article.smartphone figure {
   float: left;
   margin-right: 1.25em;
 }
-/* line 159, grid.scss */
+/* line 160, grid.scss */
 html body.story article.smartphone aside {
   width: 100%;
   max-width: 23.125em;
@@ -316,7 +316,7 @@ html body.story article.tablet {
   margin-right: 1.25em;
   float: left;
 }
-/* line 154, grid.scss */
+/* line 155, grid.scss */
 html body.story article.tablet figure {
   width: 100%;
   max-width: 31.25em;
@@ -324,7 +324,7 @@ html body.story article.tablet figure {
   float: left;
   margin-right: 1.25em;
 }
-/* line 159, grid.scss */
+/* line 160, grid.scss */
 html body.story article.tablet aside {
   width: 100%;
   max-width: 23.125em;
@@ -339,7 +339,7 @@ html body.story article.desktop {
   margin-right: 1.25em;
   float: left;
 }
-/* line 154, grid.scss */
+/* line 155, grid.scss */
 html body.story article.desktop figure {
   width: 100%;
   max-width: 55.625em;
@@ -347,7 +347,7 @@ html body.story article.desktop figure {
   float: left;
   margin-right: 1.25em;
 }
-/* line 159, grid.scss */
+/* line 160, grid.scss */
 html body.story article.desktop aside {
   width: 100%;
   max-width: 23.125em;
@@ -355,15 +355,37 @@ html body.story article.desktop aside {
   float: left;
   margin-right: 0;
 }
-/* line 119, screen.scss */
+/* line 115, screen.scss */
+html body.article article {
+  width: 31.25em;
+  float: left;
+  margin-right: 1.25em;
+  margin-right: 8.125em;
+}
+@media only screen and (max-width: 64.999em) {
+  /* line 115, screen.scss */
+  html body.article article {
+    width: 100%;
+    max-width: 31.25em;
+    margin-right: 0;
+    margin-bottom: 1.25em;
+  }
+}
+@media only screen and (max-width: 85.374em) {
+  /* line 115, screen.scss */
+  html body.article article {
+    margin-right: 1.25em;
+  }
+}
+/* line 125, screen.scss */
 html body #grid {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   opacity: .1;
   z-index: -1;
 }
-/* line 128, screen.scss */
+/* line 134, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -371,14 +393,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 136, screen.scss */
+/* line 142, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 143, screen.scss */
+/* line 149, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

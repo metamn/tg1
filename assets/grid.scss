@@ -49,7 +49,7 @@ $grid-height: $text-height;
 
 // 9. Text grid width
 // - The area of a Text grid, now measured in grid cells, ie. the gutters must be added to the original $text-width
-$text-grid-width: $text-width + $gutter * 3;
+$text-grid-width: 4 * $grid-width + 3 * $gutter;
 
 
 
@@ -73,6 +73,7 @@ $text-grid-width: $text-width + $gutter * 3;
 
 $breakpoint-large-screen: 90em; // 1440px
 $breakpoint-small-screen: 64em; // 1024px
+$breakpoint-normal-screen: 85.375em; // 1366px
 
 
 
@@ -162,6 +163,17 @@ $breakpoint-text-double-column: ($text-grid-width + $gutter) * 2;
   }
 }
 
+
+
+// 6. Article
+@mixin article-grid {
+  @include text-grid;
+  margin-right: $grid-width + $gutter;
+  
+  @media only screen and (max-width: $breakpoint-normal-screen - 0.001)  {
+    margin-right: $gutter;
+  }
+}
 
 
 

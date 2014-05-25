@@ -111,13 +111,19 @@ html {
     }
     
     
+    &.article {
+      article {
+        @include article-grid;
+      }
+    }
+    
     
     
     
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;
