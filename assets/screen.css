@@ -88,7 +88,7 @@ footer img {
 }
 
 /* line 23, other.scss */
-.portfolio article h3 {
+.portfolio article.logo h3, .portfolio article.intro h3 {
   display: none;
 }
 
@@ -118,8 +118,8 @@ html body h1 {
   margin-bottom: 1.25em;
   margin-top: 0;
   border-bottom: none;
-  padding: 0.625em;
-  width: calc(100% - 1.25em);
+  padding: 0.625em 0.3125em;
+  width: calc(100% - 0.625em);
   color: #fff;
   background: #000;
 }

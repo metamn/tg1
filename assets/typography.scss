@@ -26,8 +26,8 @@
   
   margin-top: 0;
   border-bottom: none;
-  padding: $gutter/2;
-  width: calc(100% - #{$gutter});
+  padding: $gutter/2 $gutter/4;
+  width: calc(100% - #{$gutter/2});
   
   color: #fff;
   background: #000;
