@@ -34,6 +34,20 @@
 }
 
 
+
+@mixin em {
+  border: 1px solid;
+  padding: $gutter/12 $gutter/4;
+}
+
+@mixin mark {
+  padding: $gutter/8;
+}
+
+@mixin figcaption {
+  font-style: italic;
+} 
+
 @mixin typographic-elements {
   h1 {
     @include h1;
@@ -50,6 +64,18 @@
   h4 {
     @include h4;
   }
+  
+  em {
+    @include em;
+  }
+  
+  mark {
+    @include mark;
+  }
+  
+  figcaption {
+    @include figcaption;
+  }
 }
 
 
@@ -59,9 +85,96 @@
   }
 }
 
-
-
 @mixin typographic-settings {
   @include typographic-elements;
   @include typographic-elements-spacing;
+}
+
+
+
+// Extended
+// -------------
+
+
+
+@mixin ol {
+  list-style-type: decimal;
+}
+
+@mixin ul {
+  list-style-type: square;
+}
+
+@mixin table {
+  width: 100%;
+  display: table !important;
+  
+  thead {
+    border-bottom: 1px solid;
+  }
+  
+  thead th, tbody td {
+    padding: $gutter/2;
+    padding-left: 0;
+  }
+  
+  tbody {
+    td {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+@mixin blockquote {
+  font-style: italic;
+  border: 1px dashed;
+  padding: $gutter;
+  width: calc(100% - #{$gutter*2} - 2px);
+}
+
+
+@mixin extended-typographic-elements {
+  ul {
+    @include ul;
+  }
+  
+  ol {
+    @include ol;
+  }
+  
+  table {
+    @include table;
+  }
+  
+  blockquote {
+    @include blockquote;
+  }
+}
+
+@mixin extended-typographic-elements-spacing {
+  table, blockquote {
+    margin: $gutter 0;
+  }
+  
+  figure + figure {
+    margin-top: $gutter;
+  }
+}
+
+@mixin extended-typographic-settings {
+  @include extended-typographic-elements;
+  @include extended-typographic-elements-spacing;
+}
+
+
+
+
+
+// Other 
+// --------------------
+
+
+
+@mixin lead {
+  font-weight: bold;
 }

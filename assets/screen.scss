@@ -61,6 +61,7 @@ html {
         
         &.intro {
           @include text-grid;
+          @include lead;
         }
         
         &.image {
@@ -114,6 +115,13 @@ html {
     &.article {
       article {
         @include article-grid;
+        @include extended-typographic-settings;
+        
+        &.intro {
+          p {
+            @include lead;
+          }
+        }
       }
     }
     
