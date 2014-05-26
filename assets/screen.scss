@@ -26,6 +26,7 @@ html {
       @include block;
       @include text-grid;
       @include rows(1);
+      @include logo; 
     }
     
     footer {
@@ -113,10 +114,6 @@ html {
         
         &.logo figcaption, .short {
           display: none;
-        }
-    
-        &.image {
-          //background: url("../assets/images/background-aside.png") no-repeat scroll center center rgba(0, 0, 0, 0);
         }
         
         aside {

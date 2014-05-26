@@ -34,6 +34,22 @@
 
 
 
+@mixin logo {
+  h4 {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.625em;
+    font-weight: normal;
+    font-style: italic;
+    
+    a, a:visited, a:hover {
+      color: blue;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
 @mixin spitz {
   p:first-of-type {
     &:before {
