@@ -274,43 +274,78 @@ html body.portfolio article.intro {
   }
 }
 /* line 76, screen.scss */
-html body.portfolio article.image {
-  margin-bottom: 1.25em;
-}
-/* line 79, screen.scss */
-html body.portfolio article.image figure {
-  margin-bottom: 1.25em;
-}
-/* line 84, screen.scss */
-html body.portfolio article.smartphone {
+html body.portfolio article .short {
   width: 100%;
-  max-width: 15em;
-  margin-right: 1.25em;
   float: left;
-  height: 31.25em;
+  margin-top: 1.25em;
 }
-@media only screen and (min-width: 64.001em) {
-  /* line 84, screen.scss */
-  html body.portfolio article.smartphone {
-    margin-right: 8.125em;
-  }
-}
-/* line 90, screen.scss */
-html body.portfolio article.tablet {
+/* line 81, screen.scss */
+html body.portfolio article.smartphone {
   width: 100%;
   max-width: 23.125em;
   margin-right: 1.25em;
   float: left;
+  height: 31.25em;
+}
+/* line 140, grid.scss */
+html body.portfolio article.smartphone figure {
+  width: 100%;
+  max-width: 15em;
+  margin-right: 1.25em;
+  float: left;
+}
+@media only screen and (max-width: 29.999em) {
+  /* line 81, screen.scss */
+  html body.portfolio article.smartphone {
+    height: auto;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 85, screen.scss */
+html body.portfolio article.tablet {
+  width: 100%;
+  max-width: 31.25em;
+  margin-right: 1.25em;
+  float: left;
   height: 43.75em;
 }
-/* line 95, screen.scss */
+/* line 140, grid.scss */
+html body.portfolio article.tablet figure {
+  width: 100%;
+  max-width: 23.125em;
+  margin-right: 1.25em;
+  float: left;
+}
+@media only screen and (max-width: 29.999em) {
+  /* line 85, screen.scss */
+  html body.portfolio article.tablet {
+    height: auto;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 89, screen.scss */
 html body.portfolio article.desktop {
   width: 100%;
   max-width: 39.375em;
   margin-right: 1.25em;
   float: left;
+  height: 31.25em;
 }
-/* line 101, screen.scss */
+/* line 140, grid.scss */
+html body.portfolio article.desktop figure {
+  width: 100%;
+  max-width: 39.375em;
+  margin-right: 1.25em;
+  float: left;
+}
+@media only screen and (max-width: 29.999em) {
+  /* line 89, screen.scss */
+  html body.portfolio article.desktop {
+    height: auto;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 95, screen.scss */
 html body.portfolio article.smartphone figure, html body.portfolio article.tablet figure {
   display: inline-block;
   background: black;
@@ -330,30 +365,30 @@ html body.portfolio article.smartphone figure figcaption, html body.portfolio ar
   font-style: italic;
   display: none;
 }
-/* line 108, screen.scss */
+/* line 102, screen.scss */
 html body.portfolio .similar-projects {
   display: none;
 }
-/* line 116, screen.scss */
+/* line 110, screen.scss */
 html body.story article aside, html body.story article figcaption {
   display: block;
 }
-/* line 120, screen.scss */
+/* line 114, screen.scss */
 html body.story article.logo figcaption, html body.story article .short {
   display: none;
 }
-/* line 124, screen.scss */
+/* line 118, screen.scss */
 html body.story article aside {
   margin-top: 6.25em;
 }
-/* line 128, screen.scss */
+/* line 122, screen.scss */
 html body.story article.smartphone {
   width: 100%;
   max-width: 47.5em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 149, grid.scss */
+/* line 157, grid.scss */
 html body.story article.smartphone figure {
   width: 100%;
   max-width: 15em;
@@ -361,7 +396,7 @@ html body.story article.smartphone figure {
   float: left;
   margin-right: 8.125em;
 }
-/* line 154, grid.scss */
+/* line 162, grid.scss */
 html body.story article.smartphone aside {
   width: 100%;
   max-width: 23.125em;
@@ -369,14 +404,14 @@ html body.story article.smartphone aside {
   float: left;
   margin-right: 0;
 }
-/* line 132, screen.scss */
+/* line 126, screen.scss */
 html body.story article.tablet {
   width: 100%;
   max-width: 63.75em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 149, grid.scss */
+/* line 157, grid.scss */
 html body.story article.tablet figure {
   width: 100%;
   max-width: 31.25em;
@@ -384,7 +419,7 @@ html body.story article.tablet figure {
   float: left;
   margin-right: 8.125em;
 }
-/* line 154, grid.scss */
+/* line 162, grid.scss */
 html body.story article.tablet aside {
   width: 100%;
   max-width: 23.125em;
@@ -392,14 +427,14 @@ html body.story article.tablet aside {
   float: left;
   margin-right: 0;
 }
-/* line 136, screen.scss */
+/* line 130, screen.scss */
 html body.story article.desktop {
   width: 100%;
   max-width: 88.125em;
   margin-right: 1.25em;
   float: left;
 }
-/* line 149, grid.scss */
+/* line 157, grid.scss */
 html body.story article.desktop figure {
   width: 100%;
   max-width: 55.625em;
@@ -407,7 +442,7 @@ html body.story article.desktop figure {
   float: left;
   margin-right: 1.25em;
 }
-/* line 154, grid.scss */
+/* line 162, grid.scss */
 html body.story article.desktop aside {
   width: 100%;
   max-width: 23.125em;
@@ -415,11 +450,11 @@ html body.story article.desktop aside {
   float: left;
   margin-right: 0;
 }
-/* line 145, screen.scss */
+/* line 139, screen.scss */
 html body.article header {
   height: 12.5em;
 }
-/* line 150, screen.scss */
+/* line 144, screen.scss */
 html body.article article {
   width: 31.25em;
   float: left;
@@ -427,7 +462,7 @@ html body.article article {
   margin-right: 8.125em;
 }
 @media only screen and (max-width: 31.249em) {
-  /* line 150, screen.scss */
+  /* line 144, screen.scss */
   html body.article article {
     width: 100%;
     max-width: 31.25em;
@@ -436,17 +471,17 @@ html body.article article {
   }
 }
 @media only screen and (max-width: 85.374em) {
-  /* line 150, screen.scss */
+  /* line 144, screen.scss */
   html body.article article {
     margin-right: 1.25em;
   }
-  /* line 170, grid.scss */
+  /* line 178, grid.scss */
   html body.article article ol, html body.article article ul {
     margin-left: 1.5625em;
   }
 }
 @media only screen and (min-width: 64.001em) {
-  /* line 176, grid.scss */
+  /* line 184, grid.scss */
   html body.article article.long {
     margin-top: 12.5em;
     position: relative;
@@ -500,11 +535,11 @@ html body.article article table, html body.article article blockquote, html body
 html body.article article figure + figure, html body.article article ol + p, html body.article article ul + p {
   margin-top: 1.25em;
 }
-/* line 155, screen.scss */
+/* line 149, screen.scss */
 html body.article article.intro p {
   font-weight: bold;
 }
-/* line 167, screen.scss */
+/* line 161, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -512,7 +547,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 176, screen.scss */
+/* line 170, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -520,14 +555,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 184, screen.scss */
+/* line 178, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 191, screen.scss */
+/* line 185, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

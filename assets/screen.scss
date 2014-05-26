@@ -72,28 +72,22 @@ html {
           @include rows(2);
           @include lead;
         }
-        
-        &.image {
-          margin-bottom: $gutter;
-          
-          figure {
-            margin-bottom: $gutter;
-          }
-        }
+    
+        .short {
+          @include block;
+          margin-top: $gutter;
+        } 
         
         &.smartphone {
-          @include columns(2, responsive);
-          @include rows(5);
-          @include smartphone-screenshot-grid;
+          @include single-portfolio-grid(3, 2, 5);
         }
         
         &.tablet {
-          @include columns(3, responsive);
-          @include rows(7);
+          @include single-portfolio-grid(4, 3, 7);
         }
         
         &.desktop {
-          @include columns(5, responsive);
+          @include single-portfolio-grid(5, 5, 5);
         }   
         
         

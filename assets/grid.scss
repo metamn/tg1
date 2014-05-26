@@ -75,6 +75,7 @@ $text-grid-width: 4 * $grid-width + 3 * $gutter;
 $breakpoint-large-screen: 90em; // 1440px
 $breakpoint-small-screen: 64em; // 1024px
 $breakpoint-normal-screen: 85.375em; // 1366px
+$breakpoint-mobile: 30em; // 480px
 
 
 
@@ -92,6 +93,21 @@ $breakpoint-normal-screen: 85.375em; // 1366px
     margin-bottom: $gutter;
   }
 }
+
+
+
+
+// 3. Footer
+// -------------
+@mixin footer-grid {
+  margin-top: row(1);
+  margin-bottom: row(1);
+  
+  @media only screen and (min-width: $breakpoint-small-screen) {
+    margin-left: col(1);
+  }
+}
+
 
 
 
@@ -116,33 +132,25 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 
 
 
-
-// 3. Footer
-// -------------
-@mixin footer-grid {
-  margin-top: row(1);
-  margin-bottom: row(1);
+// 4. Single portfolio item grid
+// -----------------------------
+@mixin single-portfolio-grid($col, $figure, $row) {
+  @include columns($col, responsive);
   
-  @media only screen and (min-width: $breakpoint-small-screen) {
-    margin-left: col(1);
+  figure {
+    @include columns($figure, responsive);
+  }
+
+  @include rows($row);
+  @media only screen and (max-width: $breakpoint-mobile - 0.001) {
+    height: auto;
+    margin-bottom: $gutter;
   }
 }
 
 
 
-
-// 4. Smartphone Screenshot
-@mixin smartphone-screenshot-grid {
-  @media only screen and (min-width: $breakpoint-small-screen + 0.001) {
-    margin-right: col(1);
-  }
-}
-
-
-
-
-
-// 5. Portfolio item with story
+// 5. Single portfolio item with story
 @mixin story-grid($figure-width, $figure-margin, $story-width, $story-margin) {
   @include columns($figure-width + $story-width + 1, responsive);
   
