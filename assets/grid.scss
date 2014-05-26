@@ -84,7 +84,7 @@ $breakpoint-normal-screen: 85.375em; // 1366px
   float: left;
   margin-right: $gutter;
   
-  $breakpoint-double-column: ($text-grid-width + $gutter) * 2;
+  $breakpoint-double-column: col(4);
   @media only screen and (max-width: $breakpoint-double-column - 0.001) {
     width: 100%;
     max-width: $text-grid-width;
@@ -98,18 +98,19 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 // 2. Portfolio items
 // ------------------
 @mixin portfolio-grid {
-  @include col(2);
-  @include row(2);
+  @include columns(2);
+  @include rows(2);
   
-  $breakpoint-double-column: ($grid-width + $gutter) * 4;
+  $breakpoint-double-column: col(4);
   @media only screen and (max-width: $breakpoint-double-column - 0.001) {
     @include block;
     height: auto;
+    margin-bottom: $gutter;
   }
   
   @media only screen and (min-width: $breakpoint-small-screen) {
-    @include col(3);
-    @include row(3);
+    @include columns(3);
+    @include rows(3);
   }
 }
 
@@ -119,11 +120,11 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 // 3. Footer
 // -------------
 @mixin footer-grid {
-  margin-top: $text-height + $gutter;
-  margin-bottom: $text-height + $gutter !important;
+  margin-top: row(1);
+  margin-bottom: row(1);
   
   @media only screen and (min-width: $breakpoint-small-screen) {
-    margin-left: $grid-width + $gutter;
+    margin-left: col(1);
   }
 }
 
@@ -133,7 +134,7 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 // 4. Smartphone Screenshot
 @mixin smartphone-screenshot-grid {
   @media only screen and (min-width: $breakpoint-small-screen + 0.001) {
-    margin-right: $grid-width + $gutter;
+    margin-right: col(1);
   }
 }
 
@@ -143,15 +144,15 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 
 // 5. Portfolio item with story
 @mixin story-grid($figure-width, $figure-margin, $story-width, $story-margin) {
-  @include col($figure-width + $story-width + 1, responsive);
+  @include columns($figure-width + $story-width + 1, responsive);
   
   figure {
-    @include col($figure-width, responsive);
+    @include columns($figure-width, responsive);
     margin-right: $figure-margin;
   }
   
   aside {
-    @include col($story-width, responsive);
+    @include columns($story-width, responsive);
     margin-right: $story-margin;
   }
 }
@@ -161,7 +162,7 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 // 6. Article
 @mixin article-grid {
   @include text-grid;
-  margin-right: $grid-width + $gutter;
+  margin-right: col(1);
   
   @media only screen and (max-width: $breakpoint-normal-screen - 0.001)  {
     margin-right: $gutter;
@@ -173,9 +174,9 @@ $breakpoint-normal-screen: 85.375em; // 1366px
   
   @media only screen and (min-width: $breakpoint-small-screen + 0.001)  {
     &.long {
-      margin-top: 2 * ($grid-width + $gutter);
+      margin-top: row(2);
       position: relative;
-      left: -2 * ($grid-width + $gutter);
+      left: col(-2);
     }
   }
 }
@@ -183,21 +184,33 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 
 
 
-@mixin col($nr, $responsive: false) {
+@mixin columns($nr, $responsive: false) {
   @if ($responsive == false) {
-    width: $nr * $grid-width + ($nr - 1) * $gutter;
+    width: col($nr);
   } @else {
     width: 100%;
-    max-width: $nr * $grid-width + ($nr - 1) * $gutter;
+    max-width: col($nr);
   }
   
   margin-right: $gutter;
   float: left;
 }
 
-@mixin row($nr) {
-  height: $nr * $grid-height + $nr * $gutter;
+@mixin rows($nr) {
+  height: row($nr);
 }
 
 
 
+
+@function col($nr) {
+  @if ($nr == 1) {
+    @return $grid-width + $gutter;
+  } @else {
+    @return $nr * $grid-width + ($nr - 1) * $gutter;    
+  }
+}
+
+@function row($nr) {
+  @return $nr * ($grid-height + $gutter);
+}

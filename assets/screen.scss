@@ -13,8 +13,9 @@
 
 html {
   body {
-    width: 98%;
-    margin: 1% auto;
+    // if we don't have a top gutter the first row of a grid is larger than the others. ie the first row's height cannot be set properly.
+    width: calc(100% - #{$gutter * 2});
+    margin: $gutter;
     
     @include typographic-grid;
     @include typographic-settings;
@@ -24,12 +25,13 @@ html {
     header {
       @include block;
       @include text-grid;
-      @includo row(1);
+      @include rows(1);
     }
     
     footer {
       @include block;
       @include text-grid;
+      @include rows(2);
       @include footer-grid;
       
       nav {
@@ -61,13 +63,13 @@ html {
         }
         
         &.logo {
-          @include col(2);
-          @include row(1);
+          @include columns(2);
+          @include rows(1);
         }
         
         &.intro {
           @include text-grid;
-          @include row(2);
+          @include rows(2);
           @include lead;
         }
         
@@ -80,18 +82,18 @@ html {
         }
         
         &.smartphone {
-          @include col(2, responsive);
-          @include row(5);
+          @include columns(2, responsive);
+          @include rows(5);
           @include smartphone-screenshot-grid;
         }
         
         &.tablet {
-          @include col(3, responsive);
-          @include row(7);
+          @include columns(3, responsive);
+          @include rows(7);
         }
         
         &.desktop {
-          @include col(5, responsive);
+          @include columns(5, responsive);
         }   
         
         
@@ -141,7 +143,7 @@ html {
     
     &.article {
       header {
-        @include row(2);
+        @include rows(2);
       }
       
       // It is important to have a height for <header> to push contents below the title and preserve the grid defined below
