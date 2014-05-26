@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  
+  
+  // The visual grid
   var grid = "";
   for (i=0; i<500; i++) {
     grid += '<div class="col">';

@@ -17,7 +17,7 @@ $line-height: 1.25;
 $gutter: 1.25em;
 
 // 5. Characters per row
-$characters-per-row: 55;
+$characters-per-row: 50;
 
 // 6. Text width
 // - For readability concerns it's width equals around 40-60 characters
@@ -161,7 +161,7 @@ $breakpoint-mobile: 30em; // 480px
     position: absolute;
   }
   
-  $breakpoint-story: col($margin + $aside + 1);
+  $breakpoint-story: col($margin + $aside);
   @media only screen and (max-width: $breakpoint-story - 0.001) {
     height: auto;
     
