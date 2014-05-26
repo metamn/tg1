@@ -24,6 +24,7 @@ html {
     header {
       @include block;
       @include text-grid;
+      @includo row(1);
     }
     
     footer {
@@ -61,13 +62,12 @@ html {
         
         &.logo {
           @include col(2);
+          @include row(1);
         }
         
         &.intro {
           @include text-grid;
-          margin-bottom: $gutter;
-          margin-top: $gutter;
-          
+          @include row(2);
           @include lead;
         }
         
@@ -81,11 +81,13 @@ html {
         
         &.smartphone {
           @include col(2, responsive);
+          @include row(5);
           @include smartphone-screenshot-grid;
         }
         
         &.tablet {
           @include col(3, responsive);
+          @include row(7);
         }
         
         &.desktop {
@@ -117,12 +119,16 @@ html {
           display: none;
         }
         
+        aside {
+          margin-top: $grid-height + $gutter;
+        }
+        
         &.smartphone {
           @include story-grid(2, $grid-width + $gutter, 3, 0);
         }
         
         &.tablet {
-          @include story-grid(4, $gutter, 3, 0);
+          @include story-grid(4, $grid-width + $gutter, 3, 0);
         }
         
         &.desktop {

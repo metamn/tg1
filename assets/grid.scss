@@ -196,8 +196,7 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 }
 
 @mixin row($nr) {
-  height: $nr * $text-height + ($nr - 1) * $gutter;
-  margin-bottom: $gutter;
+  height: $nr * $grid-height + $nr * $gutter;
 }
 
 
