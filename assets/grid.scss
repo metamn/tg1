@@ -1,6 +1,7 @@
 // 1. Font family
 //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family: 'Anonymous Pro', monospace;
+//$font-family: 'Anonymous Pro', monospace;
+$font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
 // Notes on font family
 // - from Google fonts select only sans-serif & order by Number of styles
@@ -8,7 +9,7 @@ $font-family: 'Anonymous Pro', monospace;
 // - the requirements however are set by typographic element decorations
 
 // 2. Font size
-$font-size: 100%;
+$font-size: 87.5%;
 
 // 3. Line height
 $line-height: 1.25;
@@ -17,7 +18,7 @@ $line-height: 1.25;
 $gutter: 1.25em;
 
 // 5. Characters per row
-$characters-per-row: 50;
+$characters-per-row: 60;
 
 // 6. Text width
 // - For readability concerns it's width equals around 40-60 characters
