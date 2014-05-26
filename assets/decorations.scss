@@ -51,11 +51,11 @@
 
 
 @mixin spitz {
-  p:first-of-type {
-    &:before {
-      border-top: 1px solid;
+  p:last-of-type {
+    &:after {
+      border-bottom: 1px solid;
       width: col(1);
-      padding-top: $gutter * 2;
+      padding-bottom: $gutter * 2;
       content: '';
       display: block;
     }

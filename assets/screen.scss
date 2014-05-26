@@ -65,7 +65,7 @@ html {
         
         &.logo {
           @include columns(2);
-          @include rows(1);
+          @include rows(2);
         }
         
         &.intro {
@@ -80,7 +80,7 @@ html {
         } 
         
         &.smartphone {
-          @include single-portfolio-grid(3, 2, 5);
+          @include single-portfolio-grid(3, 2, 6);
         }
         
         &.tablet {
@@ -88,7 +88,7 @@ html {
         }
         
         &.desktop {
-          @include single-portfolio-grid(5, 5, 5);
+          @include single-portfolio-grid(5, 5, 6);
         }   
         
         
@@ -108,24 +108,27 @@ html {
     
     &.story {
       article {
-        aside, figcaption {
+        aside, aside h3 {
           display: block;
         }
         
         &.logo figcaption, .short {
           display: none;
         }
-        
-        aside {
-          margin-top: $grid-height + $gutter;
+    
+        &.intro {
+          margin-left: col(3);
         }
+        
         
         &.smartphone {
           @include story-grid(3, 3);
+      margin-left: col(1);
         }
         
         &.tablet {
           @include story-grid(4, 3);
+      margin-left: col(1);
         }
         
         &.desktop {

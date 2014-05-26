@@ -36,7 +36,7 @@
 
 
 @mixin em {
-  border-bottom: 1px dashed;
+  font-style: italic;
 }
 
 @mixin mark {
