@@ -120,15 +120,16 @@ html {
         }
         
         &.smartphone {
-          @include story-grid(2, $grid-width + $gutter, 3, 0);
+          @include story-grid(3, 3);
         }
         
         &.tablet {
-          @include story-grid(4, $grid-width + $gutter, 3, 0);
+          @include story-grid(4, 3);
         }
         
         &.desktop {
-          @include story-grid(7, $gutter, 3, 0);
+          @include single-portfolio-grid(8, 7, 6);
+          @include story-grid(7, 3);
         }
       }
     

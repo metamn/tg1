@@ -144,24 +144,35 @@ $breakpoint-mobile: 30em; // 480px
   @include rows($row);
   @media only screen and (max-width: $breakpoint-mobile - 0.001) {
     height: auto;
-    margin-bottom: $gutter;
+    margin-bottom: $gutter; 
   }
 }
 
 
 
 // 5. Single portfolio item with story
-@mixin story-grid($figure-width, $figure-margin, $story-width, $story-margin) {
-  @include columns($figure-width + $story-width + 1, responsive);
-  
-  figure {
-    @include columns($figure-width, responsive);
-    margin-right: $figure-margin;
-  }
+@mixin story-grid($margin, $aside) {
+  @include columns($margin + $aside + 1, responsive);
+  position: relative;
   
   aside {
-    @include columns($story-width, responsive);
-    margin-right: $story-margin;
+    @include columns($aside);
+    margin-left: col($margin) + $gutter;
+    position: absolute;
+  }
+  
+  $breakpoint-story: col($margin + $aside + 1);
+  @media only screen and (max-width: $breakpoint-story - 0.001) {
+    height: auto;
+    
+    aside {
+      @include block;
+      max-width: col($aside);
+      margin-left: 0;
+      margin-top: $gutter;
+      margin-bottom: $gutter;
+      position: relative;
+    }
   }
 }
 
