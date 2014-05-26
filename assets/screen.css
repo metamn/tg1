@@ -581,7 +581,7 @@ html body.article article.intro p {
 }
 /* line 166, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
