@@ -4,10 +4,12 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
 
 @import "grid";
 @import "typography";
 @import "other";
+@import "decorations";
 
 html {
   body {
@@ -53,16 +55,12 @@ html {
       }
       
       article {
-        aside, figcaption, &.services, &.next, &.logo-animated {
+        aside, h3, figcaption, &.services, &.next, &.logo-animated {
           display: none;
         }
         
         &.logo {
           @include col(2);
-          
-          figcaption {
-            display: none;
-          }
         }
         
         &.intro {
@@ -93,6 +91,14 @@ html {
         &.desktop {
           @include col(5, responsive);
         }   
+        
+        
+        &.smartphone, &.tablet {
+          figure {
+            @include smartphone-mockup;
+          }
+        }
+        
       }
       
       .similar-projects {
@@ -107,14 +113,17 @@ html {
           display: block;
         }
         
+        &.logo figcaption, .short {
+          display: none;
+        }
+        
         &.smartphone {
-          @include story-grid(2, $gutter, 3, 0);
+          @include story-grid(2, $grid-width + $gutter, 3, 0);
         }
         
         &.tablet {
           @include story-grid(4, $gutter, 3, 0);
         }
-        
         
         &.desktop {
           @include story-grid(7, $gutter, 3, 0);
@@ -148,7 +157,7 @@ html {
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;

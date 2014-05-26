@@ -1,0 +1,33 @@
+@mixin smartphone-mockup($figcaption: false) {
+  
+  $color: #000;
+  $grey: #ccc;
+  $pad: $gutter;
+  
+  
+  display: inline-block;
+  background: $color;
+  
+  box-shadow: 1px 0 $grey, 0 1px $grey, 2px 1px $grey, 1px 2px $grey, 3px 2px $grey, 2px 3px $grey, 4px 3px $grey, 3px 4px $grey, 5px 4px $color, 4px 5px $color;
+  @include border-radius($pad);
+  padding: $pad/4 $pad/8;
+  
+  img {
+    margin: $pad $pad/2 $pad*2;
+    width: calc(100% - #{$pad});
+  }
+
+  figcaption {
+    @include figcaption;
+    display: none;
+  }
+
+  @if ($figcaption != false) {
+    img {
+      margin-bottom: 0;
+    }    
+    figcaption {
+      display: block;
+    }
+  }
+}
