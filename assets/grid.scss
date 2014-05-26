@@ -107,7 +107,7 @@ $breakpoint-normal-screen: 85.375em; // 1366px
     height: auto;
   }
   
-  @media only screen and (min-width: $breakpoint-large-screen + 0.001) {
+  @media only screen and (min-width: $breakpoint-small-screen) {
     @include col(3);
     @include row(3);
   }
@@ -120,7 +120,7 @@ $breakpoint-normal-screen: 85.375em; // 1366px
 // -------------
 @mixin footer-grid {
   margin-top: $text-height + $gutter;
-  margin-bottom: $text-height + $gutter;
+  margin-bottom: $text-height + $gutter !important;
   
   @media only screen and (min-width: $breakpoint-small-screen) {
     margin-left: $grid-width + $gutter;

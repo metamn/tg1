@@ -188,7 +188,7 @@ html body footer {
   float: left;
   margin-right: 1.25em;
   margin-top: 6.25em;
-  margin-bottom: 6.25em;
+  margin-bottom: 6.25em !important;
 }
 @media only screen and (max-width: 64.999em) {
   /* line 27, screen.scss */
@@ -225,7 +225,7 @@ html body.frontpage article {
     height: auto;
   }
 }
-@media only screen and (min-width: 90.001em) {
+@media only screen and (min-width: 64em) {
   /* line 39, screen.scss */
   html body.frontpage article {
     width: 23.125em;
