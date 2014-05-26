@@ -183,19 +183,17 @@ $breakpoint-mobile: 30em; // 480px
   @include text-grid;
   margin-right: col(1);
   
-  @media only screen and (max-width: $breakpoint-normal-screen - 0.001)  {
-    margin-right: $gutter;
-    
+  $breakpoint-double-column: ($text-grid-width + col(1)) * 2;
+  @media only screen and (max-width: $breakpoint-double-column)  {
     ol, ul {
       margin-left: $gutter + $gutter/4;
     }
   }
   
-  @media only screen and (min-width: $breakpoint-small-screen + 0.001)  {
-    &.long {
-      margin-top: row(2);
-      position: relative;
-      left: col(-2);
+  $breakpoint-triple-column: ($text-grid-width + col(1)) * 3;
+  @media only screen and (min-width: $breakpoint-triple-column)  {
+    &.move-left {
+      margin-right: $text-grid-width + col(1);
     }
   }
 }

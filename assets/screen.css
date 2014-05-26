@@ -516,22 +516,16 @@ html body.article article {
     margin-bottom: 1.25em;
   }
 }
-@media only screen and (max-width: 85.374em) {
-  /* line 149, screen.scss */
-  html body.article article {
-    margin-right: 1.25em;
-  }
-  /* line 189, grid.scss */
+@media only screen and (max-width: 72.5em) {
+  /* line 188, grid.scss */
   html body.article article ol, html body.article article ul {
     margin-left: 1.5625em;
   }
 }
-@media only screen and (min-width: 64.001em) {
+@media only screen and (min-width: 108.75em) {
   /* line 195, grid.scss */
-  html body.article article.long {
-    margin-top: 12.5em;
-    position: relative;
-    left: -16.25em;
+  html body.article article.move-left {
+    margin-right: 36.25em;
   }
 }
 /* line 144, typography.scss */
@@ -587,7 +581,7 @@ html body.article article.intro p {
 }
 /* line 166, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
