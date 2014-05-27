@@ -519,7 +519,8 @@ html body.article article {
   width: 33.75em;
   float: left;
   margin-right: 1.25em;
-  margin-right: 8.75em;
+  margin-left: 8.75em;
+  margin-right: 25em;
 }
 @media only screen and (max-width: 33.749em) {
   /* line 149, screen.scss */
@@ -531,13 +532,13 @@ html body.article article {
   }
 }
 @media only screen and (max-width: 85em) {
-  /* line 189, grid.scss */
+  /* line 190, grid.scss */
   html body.article article ol, html body.article article ul {
     margin-left: 1.5625em;
   }
 }
 @media only screen and (min-width: 127.5em) {
-  /* line 196, grid.scss */
+  /* line 197, grid.scss */
   html body.article article.move-left {
     margin-right: 42.5em;
   }
