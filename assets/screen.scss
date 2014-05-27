@@ -14,7 +14,8 @@
 html {
   body {
     // if we don't have a top gutter the first row of a grid is larger than the others. ie the first row's height cannot be set properly.
-    width: calc(100% - #{$gutter * 2});
+    $body-width: calc(100% - #{$gutter * 2});
+    width: $body-width;
     margin: $gutter;
     
     @include typographic-grid;
@@ -159,12 +160,39 @@ html {
     }
     
     
+
+
+    // The harmony calculator
+    // ---------------------------------------------
+    
+    .h-vertical, .h-horizontal, .h-gravity-point {
+      position: absolute;
+      z-index: -1;
+      opacity: .3;
+    }
+    .h-vertical {
+      left: calc(50% - 1px);
+      height: 100%;
+      border-left: 1px solid red;
+    }
+
+    .h-horizontal {
+      top: calc(50% - 1px);
+      width: $body-width;
+      border-bottom: 1px solid red;
+    }
+    
+    .h-gravity-point {
+      width: $gutter;
+      height: $gutter;
+      background: red;
+    }
     
     
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: none;
+      display: block;
       
       position: absolute;
       top: 0;
