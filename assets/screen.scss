@@ -158,6 +158,21 @@ html {
         }
       }
     }
+
+
+
+    &.gravity {
+      #object1 {
+        width: $gutter * 2;
+        height: $gutter * 2;
+        background: blue;
+        opacity: .3;
+    
+        position: absolute;
+        left: calc(50% - #{$gutter});
+        top: calc(50% - #{$gutter});
+      }
+    }
     
     
 
@@ -183,9 +198,16 @@ html {
     }
     
     .h-gravity-point {
-      width: $gutter;
-      height: $gutter;
-      background: red;
+      &:after {
+        content: '';
+        display: block;
+        width: $gutter;
+        height: $gutter;
+        background: red;
+        position: relative;
+        top: -$gutter / 2;
+        left: -$gutter / 2;
+      }
     }
     
     

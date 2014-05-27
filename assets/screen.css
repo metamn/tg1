@@ -594,31 +594,46 @@ html body.article article figure + figure, html body.article article ol + p, htm
 html body.article article.intro p {
   font-weight: bold;
 }
-/* line 168, screen.scss */
+/* line 165, screen.scss */
+html body.gravity #object1 {
+  width: 2.5em;
+  height: 2.5em;
+  background: blue;
+  opacity: .3;
+  position: absolute;
+  left: calc(50% - 1.25em);
+  top: calc(50% - 1.25em);
+}
+/* line 183, screen.scss */
 html body .h-vertical, html body .h-horizontal, html body .h-gravity-point {
   position: absolute;
   z-index: -1;
   opacity: .3;
 }
-/* line 173, screen.scss */
+/* line 188, screen.scss */
 html body .h-vertical {
   left: calc(50% - 1px);
   height: 100%;
   border-left: 1px solid red;
 }
-/* line 179, screen.scss */
+/* line 194, screen.scss */
 html body .h-horizontal {
   top: calc(50% - 1px);
   width: calc(100% - 2.5em);
   border-bottom: 1px solid red;
 }
-/* line 185, screen.scss */
-html body .h-gravity-point {
+/* line 201, screen.scss */
+html body .h-gravity-point:after {
+  content: '';
+  display: block;
   width: 1.25em;
   height: 1.25em;
   background: red;
+  position: relative;
+  top: -0.625em;
+  left: -0.625em;
 }
-/* line 194, screen.scss */
+/* line 216, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -626,7 +641,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 203, screen.scss */
+/* line 225, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -634,14 +649,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 211, screen.scss */
+/* line 233, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 218, screen.scss */
+/* line 240, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;
