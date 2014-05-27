@@ -162,15 +162,22 @@ html {
 
 
     &.gravity {
-      #object1 {
-        width: $gutter * 2;
-        height: $gutter * 2;
-        background: blue;
-        opacity: .3;
-    
+      .object {
+        width: $gutter * 4;
+        height: $gutter * 4;
+        background: lightblue;
         position: absolute;
-        left: calc(50% - #{$gutter});
-        top: calc(50% - #{$gutter});
+        display: block;
+      }
+  
+      #object1 {
+        left: calc(55% - #{$gutter});
+        top: calc(25% - #{$gutter});
+      }
+
+      #object2 {
+        left: -calc(25% - #{$gutter});
+        top: calc(25% - #{$gutter});
       }
     }
     

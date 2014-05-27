@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('body').append('<div class="h-vertical"></div>');
   
   //var elements = '[{"id" : "header", "type" : "text"},{"id" : "footer","type" : "text"},{"id" : "article","type" : "image", "collection" : "true"}]';
-  var elements = '[{"id" : "#object1", "type" : "image"}]';
+  var elements = '[{"id" : ".object", "type" : "image", "collection" : "true"}]';
   
   var sum = 0;
   var sumX = 0;
@@ -35,7 +35,7 @@ $(document).ready(function() {
   
   // Draw the gravity point
   var x = windowWidth / 2 + sumX / sum;
-  var y = windowHeight / 2 + sumY / sum;
+  var y = windowHeight / 2 - sumY / sum;
   var style = 'left: ' + x + 'px; top: ' + y + 'px';
   $('body').append('<div class="h-gravity-point" style="' + style + '"></div>');
   

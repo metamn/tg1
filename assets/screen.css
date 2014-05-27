@@ -595,34 +595,42 @@ html body.article article.intro p {
   font-weight: bold;
 }
 /* line 165, screen.scss */
-html body.gravity #object1 {
-  width: 2.5em;
-  height: 2.5em;
-  background: blue;
-  opacity: .3;
+html body.gravity .object {
+  width: 5em;
+  height: 5em;
+  background: lightblue;
   position: absolute;
-  left: calc(50% - 1.25em);
-  top: calc(50% - 1.25em);
+  display: block;
 }
-/* line 183, screen.scss */
+/* line 173, screen.scss */
+html body.gravity #object1 {
+  left: calc(55% - 1.25em);
+  top: calc(25% - 1.25em);
+}
+/* line 178, screen.scss */
+html body.gravity #object2 {
+  left: -calc(25% - 1.25em);
+  top: calc(25% - 1.25em);
+}
+/* line 190, screen.scss */
 html body .h-vertical, html body .h-horizontal, html body .h-gravity-point {
   position: absolute;
   z-index: -1;
   opacity: .3;
 }
-/* line 188, screen.scss */
+/* line 195, screen.scss */
 html body .h-vertical {
   left: calc(50% - 1px);
   height: 100%;
   border-left: 1px solid red;
 }
-/* line 194, screen.scss */
+/* line 201, screen.scss */
 html body .h-horizontal {
   top: calc(50% - 1px);
   width: calc(100% - 2.5em);
   border-bottom: 1px solid red;
 }
-/* line 201, screen.scss */
+/* line 208, screen.scss */
 html body .h-gravity-point:after {
   content: '';
   display: block;
@@ -633,7 +641,7 @@ html body .h-gravity-point:after {
   top: -0.625em;
   left: -0.625em;
 }
-/* line 216, screen.scss */
+/* line 223, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -641,7 +649,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 225, screen.scss */
+/* line 232, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -649,14 +657,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 233, screen.scss */
+/* line 240, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 240, screen.scss */
+/* line 247, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;
