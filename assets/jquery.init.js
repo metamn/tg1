@@ -5,54 +5,81 @@ $(document).ready(function() {
   $('body').append('<div class="h-horizontal"></div>');
   $('body').append('<div class="h-vertical"></div>');
   
-  //var elements = '[{"id" : "header", "type" : "text"},{"id" : "footer","type" : "text"},{"id" : "article","type" : "image", "collection" : "true"}]';
-  var elements = '[{"id" : ".object", "type" : "image", "collection" : "true"}]';
   
-  var sum = 0;
-  var sumX = 0;
-  var sumY = 0;
+  //var elements = '[{"id" : ".object", "type" : "image", "collection" : "true"}]';
   
-  var windowHeight = $(window).height();
-  var windowWidth = $(window).width();
   
-  // Loop through elements
-  var data = $.parseJSON(elements);
-  $.each(data, function() {
-    if (this['collection']) {
+  function gravityPoint() {
+    var sum = 0;
+    var sumX = 0;
+    var sumY = 0;
+    
+    // Loop through elements
+    var data = $.parseJSON(elements);
+    $.each(data, function() {
       
-      // A collection of articles, images
-      var type = this['type'];
-      $(this['id']).each(function() {
-        calculate($(this), type);
-      });
-    } else {
-      
-      // A single standalone item
-      calculate($(this['id']), this['type']);
-    }
-  });
+      // This is a collection 
+      if (this['collection']) {
+        var type = this['type'];
+        $(this['id']).each(function() {
+          
+          // Do calculate
+          // - I couldn't pass sum, sumX, sumY as a reference so their values were lost
+          // - so I've copied here the function body ...
+          item = $(this);
+          if (isElementInViewport(item)) {
+              var weight = getElementWeight(item, type);
+              var x = distanceX(item);
+              var y = distanceY(item);
+              
+              sum += weight;
+              sumX += weight * x;
+              sumY += weight * y;
+          }
+        });
+        
+        // This is a single standalone item
+      } else {
+        item = $(this['id']);
+        if (isElementInViewport(item)) {
+            var weight = getElementWeight(item, type);
+            var x = distanceX(item);
+            var y = distanceY(item);
+            
+            sum += weight;
+            sumX += weight * x;
+            sumY += weight * y;
+        }
+      }
+    });
+    
+    // Draw the gravity point
+    var x = $(window).width() / 2 + sumX / sum;
+    var y = $(window).height() / 2 - sumY / sum;
+    var style = 'left: ' + x + 'px; top: ' + y + 'px';
+    $('body').append('<div class="h-gravity-point" style="' + style + '"></div>');
+  }
   
-  
-  // Draw the gravity point
-  var x = windowWidth / 2 + sumX / sum;
-  var y = windowHeight / 2 - sumY / sum;
-  var style = 'left: ' + x + 'px; top: ' + y + 'px';
-  $('body').append('<div class="h-gravity-point" style="' + style + '"></div>');
+  $(window).on('DOMContentLoaded load resize scroll', gravityPoint); 
   
   
   // Calculate
-  function calculate(item, type) {
-    var weight = getElementWeight(item, type);
-    var x = distanceX(item);
-    var y = distanceY(item);
-    
-    sum += weight;
-    sumX += weight * x;
-    sumY += weight * y;
+  // - only elements in the viewport are taken into consioderation
+  function calculate(item, type, sum, sumX, sumY) {
+    if (isElementInViewport(item)) {
+      var weight = getElementWeight(item, type);
+      var x = distanceX(item);
+      var y = distanceY(item);
+      
+      sum += weight;
+      sumX += weight * x;
+      sumY += weight * y;
+    }
   }
   
   
   // Get the distance of the center of an element from origo
+  // - for X
   function distanceX(item) {
     var w = item.css('width');
     var centerX = parseInt(w) / 2;
@@ -60,9 +87,10 @@ $(document).ready(function() {
     var position = item.offset();
     
     var coordinateX = position.left + centerX;
-    return coordinateX - windowWidth / 2;
+    return coordinateX - $(window).width() / 2;
   }
   
+  // - for Y
   function distanceY(item) {
     var h = item.css('height');
     var centerY = parseInt(h) / 2;
@@ -70,7 +98,7 @@ $(document).ready(function() {
     var position = item.offset();
     
     var coordinateY = position.top + centerY;
-    return windowHeight / 2 - coordinateY;
+    return $(window).height() / 2 - coordinateY;
   }
   
   
@@ -86,7 +114,24 @@ $(document).ready(function() {
   }
   
   
-  
+  // Check if the element is inside the viewport
+  // - source: http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport (el) {
+
+    //special bonus for those using jQuery
+    if (el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
+}
   
   
   
