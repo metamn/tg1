@@ -126,8 +126,8 @@ $breakpoint-mobile: 30em; // 480px
   }
   
   @media only screen and (min-width: $breakpoint-large-screen + 0.001) {
-    @include columns(4);
-    @include rows(4);
+    @include columns(3);
+    @include rows(3);
   }
 }
 

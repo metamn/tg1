@@ -242,10 +242,10 @@ html body.frontpage article {
 @media only screen and (min-width: 90.001em) {
   /* line 46, screen.scss */
   html body.frontpage article {
-    width: 33.75em;
+    width: 25em;
     margin-right: 1.25em;
     float: left;
-    height: 25em;
+    height: 18.75em;
   }
 }
 /* line 49, screen.scss */
