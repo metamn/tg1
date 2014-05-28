@@ -239,13 +239,13 @@ html body.frontpage article {
     margin-bottom: 1.25em;
   }
 }
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 90.001em) {
   /* line 46, screen.scss */
   html body.frontpage article {
-    width: 25em;
+    width: 33.75em;
     margin-right: 1.25em;
     float: left;
-    height: 18.75em;
+    height: 25em;
   }
 }
 /* line 49, screen.scss */
@@ -613,32 +613,41 @@ html body.gravity #object2 {
   top: calc(25% - 1.25em);
 }
 /* line 190, screen.scss */
-html body .h-vertical, html body .h-horizontal {
+html body #gravity {
+  display: block;
+}
+/* line 193, screen.scss */
+html body #gravity .h-vertical, html body #gravity .h-horizontal, html body #gravity .h-golden-rectangle {
   position: fixed;
-  z-index: -1;
+  z-index: 1000;
   opacity: .3;
 }
-/* line 195, screen.scss */
-html body .h-vertical {
+/* line 199, screen.scss */
+html body #gravity .h-vertical {
   left: calc(50% - 1px);
   height: 100%;
   border-left: 1px solid red;
 }
-/* line 201, screen.scss */
-html body .h-horizontal {
+/* line 205, screen.scss */
+html body #gravity .h-horizontal {
   top: calc(50% - 1px);
   width: calc(100% - 2.5em);
   border-bottom: 1px solid red;
 }
-/* line 207, screen.scss */
-html body .h-gravity-point {
+/* line 211, screen.scss */
+html body #gravity .h-golden-rectangle {
+  border: 1px solid green;
+  opacity: .8;
+}
+/* line 216, screen.scss */
+html body #gravity .h-gravity-point {
   position: absolute;
   z-index: 1000;
   opacity: .3;
   display: none;
 }
-/* line 212, screen.scss */
-html body .h-gravity-point:after {
+/* line 221, screen.scss */
+html body #gravity .h-gravity-point:after {
   content: '';
   display: block;
   width: 1.25em;
@@ -648,19 +657,19 @@ html body .h-gravity-point:after {
   top: -0.625em;
   left: -0.625em;
 }
-/* line 224, screen.scss */
-html body .h-gravity-point:last-of-type {
+/* line 233, screen.scss */
+html body #gravity .h-gravity-point:last-of-type {
   display: block;
 }
-/* line 232, screen.scss */
+/* line 241, screen.scss */
 html body #grid {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   opacity: .1;
   z-index: -1;
 }
-/* line 241, screen.scss */
+/* line 250, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -668,14 +677,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 249, screen.scss */
+/* line 258, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 256, screen.scss */
+/* line 265, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;

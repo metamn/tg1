@@ -2,11 +2,34 @@ $(document).ready(function() {
   
   
   // The harmony calculator
-  $('body').append('<div class="h-horizontal"></div>');
-  $('body').append('<div class="h-vertical"></div>');
+  // -------------------------------------------------
+  
+  // The container
+  $('body').append('<section id="gravity">');
+  
+  // The axis
+  $('#gravity').append('<div class="h-horizontal"></div>');
+  $('#gravity').append('<div class="h-vertical"></div>');
+  $('#gravity').append('<div class="h-golden-rectangle"></div>');
   
   
-  //var elements = '[{"id" : ".object", "type" : "image", "collection" : "true"}]';
+  function goldenRectangle() {
+    var minorX = $(window).width() / 8 * 3;
+    var majorX = $(window).width() / 8 * 5;
+    var left = $(window).width() / 2 - minorX;
+    var right = majorX - $(window).width() / 2;
+    
+    var minorY = $(window).height() / 8 * 3;
+    var majorY = $(window).height() / 8 * 5;
+    var top = $(window).height() / 2 - minorY;
+    var bottom = majorY - $(window).height() / 2;
+    
+    
+    $('.h-golden-rectangle').css('width', left + right + 'px');
+    $('.h-golden-rectangle').css('height', top + bottom + 'px');
+    $('.h-golden-rectangle').css('left', minorX + 'px');
+    $('.h-golden-rectangle').css('top', minorY + 'px');
+  }
   
   
   function gravityPoint() {
@@ -57,10 +80,13 @@ $(document).ready(function() {
     var x = $(window).width() / 2 + sumX / sum;
     var y = $(window).height() / 2 - sumY / sum;
     var style = 'left: ' + x + 'px; top: ' + y + 'px';
-    $('body').append('<div class="h-gravity-point" style="' + style + '"></div>');
+    $('#gravity').append('<div class="h-gravity-point" style="' + style + '"></div>');
+    
+    $('body').append('</section>');
   }
   
   $(window).on('DOMContentLoaded load resize scroll', gravityPoint); 
+  $(window).on('DOMContentLoaded load resize scroll', goldenRectangle); 
   
   
   // Calculate

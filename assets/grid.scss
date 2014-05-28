@@ -125,9 +125,9 @@ $breakpoint-mobile: 30em; // 480px
     margin-bottom: $gutter;
   }
   
-  @media only screen and (min-width: $breakpoint-small-screen) {
-    @include columns(3);
-    @include rows(3);
+  @media only screen and (min-width: $breakpoint-large-screen + 0.001) {
+    @include columns(4);
+    @include rows(4);
   }
 }
 

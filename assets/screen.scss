@@ -187,50 +187,59 @@ html {
     // The harmony calculator
     // ---------------------------------------------
     
-    .h-vertical, .h-horizontal {
-      position: fixed;
-      z-index: -1;
-      opacity: .3;
-    }
-    .h-vertical {
-      left: calc(50% - 1px);
-      height: 100%;
-      border-left: 1px solid red;
-    }
-
-    .h-horizontal {
-      top: calc(50% - 1px);
-      width: $body-width;
-      border-bottom: 1px solid red;
-    }
-    
-    .h-gravity-point {
-      position: absolute;
-      z-index: 1000;
-      opacity: .3;
+    #gravity {
+      display: block;
   
-      &:after {
-        content: '';
-        display: block;
-        width: $gutter;
-        height: $gutter;
-        background: red;
-        position: relative;
-        top: -$gutter / 2;
-        left: -$gutter / 2;
+      .h-vertical, .h-horizontal, .h-golden-rectangle {
+        position: fixed;
+        z-index: 1000;
+        opacity: .3;
       }
   
-      display: none;
-      &:last-of-type {
-        display: block;
+      .h-vertical {
+        left: calc(50% - 1px);
+        height: 100%;
+        border-left: 1px solid red;
+      }
+  
+      .h-horizontal {
+        top: calc(50% - 1px);
+        width: $body-width;
+        border-bottom: 1px solid red;
+      }
+  
+      .h-golden-rectangle {
+        border: 1px solid green;
+        opacity: .8;
+      }
+      
+      .h-gravity-point {
+        position: absolute;
+        z-index: 1000;
+        opacity: .3;
+    
+        &:after {
+          content: '';
+          display: block;
+          width: $gutter;
+          height: $gutter;
+          background: red;
+          position: relative;
+          top: -$gutter / 2;
+          left: -$gutter / 2;
+        }
+    
+        display: none;
+        &:last-of-type {
+          display: block;
+        }
       }
     }
-    
     
     // The visual grid
     // ---------------------------------------------
     #grid {
-      display: block;
+      display: none;
       
       position: absolute;
       top: 0;
