@@ -613,8 +613,8 @@ html body.gravity #object2 {
   top: calc(25% - 1.25em);
 }
 /* line 190, screen.scss */
-html body .h-vertical, html body .h-horizontal, html body .h-gravity-point {
-  position: absolute;
+html body .h-vertical, html body .h-horizontal {
+  position: fixed;
   z-index: -1;
   opacity: .3;
 }
@@ -632,9 +632,12 @@ html body .h-horizontal {
 }
 /* line 207, screen.scss */
 html body .h-gravity-point {
+  position: absolute;
   z-index: 1000;
+  opacity: .3;
+  display: none;
 }
-/* line 210, screen.scss */
+/* line 212, screen.scss */
 html body .h-gravity-point:after {
   content: '';
   display: block;
@@ -645,7 +648,11 @@ html body .h-gravity-point:after {
   top: -0.625em;
   left: -0.625em;
 }
-/* line 225, screen.scss */
+/* line 224, screen.scss */
+html body .h-gravity-point:last-of-type {
+  display: block;
+}
+/* line 232, screen.scss */
 html body #grid {
   display: block;
   position: absolute;
@@ -653,7 +660,7 @@ html body #grid {
   opacity: .1;
   z-index: -1;
 }
-/* line 234, screen.scss */
+/* line 241, screen.scss */
 html body #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
@@ -661,14 +668,14 @@ html body #grid .col {
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
-/* line 242, screen.scss */
+/* line 249, screen.scss */
 html body #grid .gutter-right {
   float: right;
   border-left: 1px solid;
   width: calc(1.25em - 1px);
   height: 100%;
 }
-/* line 249, screen.scss */
+/* line 256, screen.scss */
 html body #grid .gutter-bottom {
   float: left;
   border-bottom: 1px solid;
